@@ -231,3 +231,83 @@ section.container {
 .seo-content ul {
     padding-left: 20px;
 }
+.tool-intro {
+    margin-top: 10px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+/* About Page Styling */
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Card Design */
+.card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Headings */
+.card h2 {
+  margin-bottom: 10px;
+}
+
+/* Lists */
+.card ul {
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 6px;
+}
+/* Contact Page */
+
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #4338ca;
+}
