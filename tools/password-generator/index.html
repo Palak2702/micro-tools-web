@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <title>Password Generator (Free) - Strong & Secure Password Online</title> -->
+    <title>
+      Password Generator (Strong & Secure) – Create Random Password Online
+    </title>
+    <meta
+      name="description"
+      content="Generate strong and secure passwords instantly. Free password generator with symbols, numbers and custom length."
+    />
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/tools.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container tool-container">
+      <h1>Password Generator Online</h1>
+
+      <p class="tool-intro">
+        Generate strong and secure passwords instantly using our free password
+        generator tool.
+      </p>
+
+      <div class="input-group">
+        <label>Password Length</label>
+        <input type="number" id="length" value="12" min="4" max="50" />
+      </div>
+
+      <div class="checkbox-group">
+        <label
+          ><input type="checkbox" id="uppercase" checked /> Uppercase
+          (A-Z)</label
+        >
+        <label
+          ><input type="checkbox" id="lowercase" checked /> Lowercase
+          (a-z)</label
+        >
+        <label
+          ><input type="checkbox" id="numbers" checked /> Numbers (0-9)</label
+        >
+        <label><input type="checkbox" id="symbols" /> Symbols (!@#$)</label>
+      </div>
+
+      <button id="generateBtn">Generate Password</button>
+
+      <div class="results">
+        <p id="passwordResult">Your password will appear here</p>
+      </div>
+
+      <div class="action-area">
+        <button id="copyBtn">Copy Password</button>
+      </div>
+    </div>
+    <div class="container seo-content">
+      <h2>What is a Password Generator?</h2>
+      <p>
+        A password generator helps you create strong and secure passwords using
+        random characters, numbers and symbols.
+      </p>
+
+      <h2>How to Use This Tool?</h2>
+      <ul>
+        <li>Select password length</li>
+        <li>Choose options like uppercase, numbers or symbols</li>
+        <li>Generate secure password instantly</li>
+      </ul>
+
+      <h2>Why Use Our Tool?</h2>
+      <p>Our password generator is secure, fast and does not store any data.</p>
+
+      <h2>Related Tools</h2>
+      <p>
+        Try our <a href="/tools/base64-encoder-decoder.html">Base64 Tool</a> and
+        <a href="/tools/random-number.html">Random Number Generator</a>
+      </p>
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Are generated passwords secure?</h3>
+      <p>Yes, they are randomly generated for better security.</p>
+
+      <h3>Can I customize password length?</h3>
+      <p>Yes, you can select length and character types.</p>
+
+      <h3>Is this tool safe?</h3>
+      <p>Yes, no data is stored.</p>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/password.js"></script>
+  </body>
+</html>
