@@ -4,13 +4,51 @@
     box-sizing: border-box;
 }
 
+html,
 body {
+    min-height: 100%;
+
+    height: auto;
+    overflow-y: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f4f7fb;
     color: #1f2937;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+main {
+    flex: 1;
 }
 
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .tool-container {
+        padding: 10px;
+    }
+
+    textarea {
+        font-size: 14px;
+    }
+
+    .results {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+body {
+    scroll-behavior: smooth;
+}
 
 
 /* FOOTER */
@@ -76,7 +114,7 @@ body {
     color: #111;
     transition: all 0.25s ease;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* subtle top highlight */
@@ -220,6 +258,12 @@ section.container {
     gap: 12px;
 }
 
+textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+}
+
 .contact-form input,
 .contact-form textarea {
     padding: 10px;
@@ -250,7 +294,7 @@ section.container {
 .container {
     width: 92%;
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* HEADER */
@@ -328,7 +372,7 @@ section.container {
     background: #fff;
     min-width: 220px;
     border-radius: 8px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 1px solid #e5e7eb;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     z-index: 999;
