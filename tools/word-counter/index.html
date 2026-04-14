@@ -2,33 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use our free online word counter to count words, characters, sentences, and reading time instantly. Fast, accurate, and works on all devices. Perfect for writers, students, and bloggers." />
+    <meta name="theme-color" content="#2563eb" />
 
-    <title>
-      Free Word Counter Tool Online – Count Words, Characters & Reading Time
-      Instantly
-    </title>
-
-    <meta
-      name="description"
-      content="Use our free online word counter to count words, characters, sentences, and reading time instantly. Fast, accurate, and works on all devices. Perfect for writers, students, and bloggers."
-    />
+    <title>Free Word Counter Tool Online – Count Words, Characters & Reading Time</title>
 
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link rel="stylesheet" href="../../assets/css/tools.css" />
   </head>
-  <style>
-    .action-area {
-      margin-top: 10px;
-    }
-  </style>
   <body>
-    <!-- Header -->
+    <!-- HEADER COMPONENT - Fetched from /components/header.html -->
     <div id="header"></div>
 
-    <div class="container tool-container">
-      <h1>Free Word Counter Online</h1>
+    <main class="container tool-container">
+      <h1>📝 Free Word Counter Online</h1>
       <p class="tool-intro">
         Our free word counter tool helps you instantly count words, characters,
         sentences, and reading time with high accuracy. Whether you are a
@@ -39,111 +27,119 @@
 
       <textarea
         id="textInput"
-        placeholder="Paste or type your text here..."
+        placeholder="Paste or type your text here to start counting..."
+        aria-label="Text input for word counting"
       ></textarea>
 
       <div class="action-area">
-        <button id="countBtn">Count</button>
+        <button id="countBtn" class="btn btn-primary">Count</button>
       </div>
 
-      <div class="results">
-        <p>Words: <span id="wordCount">0</span></p>
-        <p>Characters (with spaces): <span id="charWithSpace">0</span></p>
-        <p>Characters (without spaces): <span id="charWithoutSpace">0</span></p>
-        <p>Lines: <span id="lineCount">0</span></p>
-        <p>Sentences: <span id="sentenceCount">0</span></p>
-        <p>Reading Time: <span id="readingTime">0</span> min</p>
+      <div class="results" aria-live="polite" aria-atomic="true">
+        <p>Words<span id="wordCount">0</span></p>
+        <p>Characters (with spaces)<span id="charWithSpace">0</span></p>
+        <p>Characters (without spaces)<span id="charWithoutSpace">0</span></p>
+        <p>Lines<span id="lineCount">0</span></p>
+        <p>Sentences<span id="sentenceCount">0</span></p>
+        <p>Reading Time<span id="readingTime">0</span> min</p>
       </div>
-    </div>
-    <div class="container seo-content">
+    </main>
+
+    <section class="container seo-content">
       <h2>What is a Word Counter Tool?</h2>
       <p>
-        A word counter is a simple and powerful online tool that helps you count
-        words, characters, sentences, and even estimate reading time instantly.
-        It is widely used by students, writers, bloggers, and professionals who
-        need to meet specific word limits or improve their writing quality.
-        Instead of manually counting words, this tool gives you accurate results
-        in real time.
+        A word counter is a powerful and simple online tool that helps you count words, characters,
+        sentences, and estimate reading time instantly. It's widely used by students, writers, bloggers,
+        and professionals who need to meet specific word limits or analyze their writing. Instead of
+        manually counting words, this tool delivers accurate results in real time.
       </p>
 
       <h2>How to Use This Free Word Counter?</h2>
       <p>
-        Using this tool is very easy and requires no technical knowledge. Simply
-        paste or type your text into the input box, and the tool will
-        automatically calculate all important metrics. You can instantly see the
-        number of words, characters with and without spaces, sentences, lines,
-        and estimated reading time.
+        Using this tool is incredibly easy and requires no technical knowledge. Simply paste or type
+        your content into the input box, and the tool will automatically calculate all metrics. You can
+        instantly see the number of words, characters with and without spaces, sentences, lines, and
+        estimated reading time.
       </p>
       <ul>
-        <li>Type or paste your content into the text box.</li>
-        <li>View live word and character count.</li>
-        <li>Edit your text and track changes instantly.</li>
-        <li>Use results to optimize your writing.</li>
+        <li>Type or paste your content into the text box</li>
+        <li>Click the "Count" button to get instant analysis</li>
+        <li>View all metrics including words, characters, and reading time</li>
+        <li>Edit your text and recount to track changes</li>
+        <li>Use results to optimize your writing for target audiences</li>
       </ul>
 
       <h2>Key Features of Our Word Counter</h2>
       <p>
-        Our online word counter tool is designed to be fast, accurate, and
-        user-friendly. It offers several useful features to improve your writing
-        workflow.
+        Our online word counter is designed for speed, accuracy, and user-friendliness. It offers
+        several useful features to improve your writing workflow and content analysis.
       </p>
       <ul>
         <li>Real-time word and character counting</li>
-        <li>Sentence and paragraph detection</li>
-        <li>Reading time estimation</li>
-        <li>Works on mobile, tablet, and desktop</li>
+        <li>Accurate sentence and paragraph detection</li>
+        <li>Automatic reading time estimation</li>
+        <li>Works on mobile, tablet, and desktop devices</li>
         <li>No login or installation required</li>
+        <li>100% free with no limitations</li>
+        <li>Instant results – no processing delays</li>
       </ul>
 
       <h2>Why Use This Word Counter?</h2>
       <p>
-        Writing content with proper length is important for blogs, assignments,
-        SEO articles, and social media posts. This tool helps you stay within
-        limits and improve readability. It is especially useful for content
-        creators who want to optimize their articles for search engines and user
+        Writing content with proper length is crucial for blogs, assignments, SEO articles, and social
+        media posts. This tool helps you stay within word limits and improve readability. It's especially
+        useful for content creators who want to optimize articles for search engines and maximize user
         engagement.
       </p>
 
       <h2>Who Can Use This Tool?</h2>
       <p>
-        This tool is helpful for a wide range of users. Students can use it for
-        assignments, writers for articles and books, bloggers for SEO content,
-        and professionals for reports and emails. Anyone who works with text can
+        This tool is beneficial for a wide range of users. Students can use it for assignments and essays.
+        Writers use it for articles and books. Bloggers use it for SEO optimization. Professionals use it
+        for reports and emails. Teachers can use it for demonstrations. Anyone who works with text can
         benefit from this simple yet powerful tool.
       </p>
 
       <h2>Frequently Asked Questions</h2>
 
-      <h3>Is this word counter tool free?</h3>
+      <h3>Is this word counter tool completely free?</h3>
       <p>
-        Yes, this tool is completely free to use with no hidden charges or
-        registration required.
+        Yes, this tool is 100% free to use with no hidden charges or registration required.
       </p>
 
       <h3>Does it work in real time?</h3>
       <p>
-        Yes, the tool updates counts instantly as you type or paste your text.
+        Yes, the tool updates counts instantly as you type or paste content into the text box.
       </p>
 
-      <h3>Is my data safe?</h3>
+      <h3>Is my data safe and private?</h3>
       <p>
-        Yes, your text is processed in your browser and is not stored anywhere,
-        ensuring full privacy.
+        Yes, your text is processed directly in your browser and is not stored anywhere, ensuring
+        complete privacy.
+      </p>
+
+      <h3>Can I use this on my phone?</h3>
+      <p>
+        Yes, our tool is fully responsive and works perfectly on all mobile devices, tablets, and
+        computers.
+      </p>
+
+      <h3>How accurate is the word count?</h3>
+      <p>
+        Our tool uses advanced algorithms to count words accurately, accounting for multiple spaces,
+        special characters, and various text formats.
       </p>
 
       <h2>Related Tools</h2>
       <p>
-        You can also try our other useful tools like
-        <a href="/tools/percentage-calculator"
-          >Percentage Calculator</a
-        >,
-        <a href="/tools/password-generator">Password Generator</a>,
-        and <a href="/tools/case-converter">Case Converter</a> to
-        improve your productivity.
+        Check out our other useful tools to enhance your productivity:
+        <a href="/tools/case-converter/">Text Case Converter</a>,
+        <a href="/tools/password-generator/">Password Generator</a>,
+        and <a href="/tools/percentage-calculator/">Percentage Calculator</a>.
       </p>
-    </div>
+    </section>
 
-    <!-- Footer -->
+    <!-- FOOTER COMPONENT - Fetched from /components/footer.html -->
     <div id="footer"></div>
 
     <script src="../../assets/js/main.js"></script>

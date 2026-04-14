@@ -2,156 +2,136 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Percentage Calculator (Free) - Calculate Percentages Instantly</title>
-      -->
-    <title>
-      Percentage Calculator Online – Calculate Percentages, Increase & Decrease
-      Instantly
-    </title>
+    <meta name="description" content="Free percentage calculator to calculate percentages, percentage increase, decrease, and ratios instantly. Fast, accurate, and easy to use." />
+    <meta name="theme-color" content="#2563eb" />
 
-    <meta
-      name="description"
-      content="Free percentage calculator to calculate percentages, percentage increase, decrease, and ratios instantly. Fast, accurate, and easy to use."
-    />
+    <title>Percentage Calculator Online – Calculate Percentages, Increase & Decrease Instantly</title>
 
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link rel="stylesheet" href="../../assets/css/tools.css" />
   </head>
   <body>
+    <!-- HEADER COMPONENT - Fetched from /components/header.html -->
     <div id="header"></div>
 
-    <div class="container tool-container">
-      <h1>Free Percentage Calculator Online</h1>
+    <main class="container tool-container">
+      <h1>📊 Free Percentage Calculator Online</h1>
 
       <p class="tool-intro">
-        Use our free percentage calculator to quickly calculate percentages,
-        percentage increase, decrease, and more. This tool is perfect for
-        students, professionals, and anyone who needs fast and accurate
+        Use our free percentage calculator to quickly calculate percentages, percentage increases, decreases,
+        and more. This tool is perfect for students, professionals, and anyone who needs fast and accurate
         percentage calculations without any effort.
       </p>
 
-      <!-- TYPE 1 -->
+      <!-- PERCENTAGE OF VALUE -->
       <div class="calc-box">
         <h3>What is X% of Y?</h3>
-        <input type="number" id="p1" placeholder="Percentage" />
-        <input type="number" id="p2" placeholder="Value" />
-        <button onclick="calc1()">Calculate</button>
+        <input type="number" id="p1" placeholder="Enter Percentage" aria-label="Percentage" />
+        <input type="number" id="p2" placeholder="Enter Value" aria-label="Value" />
+        <button onclick="calc1()" class="btn btn-primary">Calculate</button>
         <p>Result: <span id="r1">0</span></p>
       </div>
 
-      <!-- TYPE 2 -->
+      <!-- PERCENTAGE RATIO -->
       <div class="calc-box">
         <h3>X is what % of Y?</h3>
-        <input type="number" id="p3" placeholder="Value" />
-        <input type="number" id="p4" placeholder="Total" />
-        <button onclick="calc2()">Calculate</button>
+        <input type="number" id="p3" placeholder="Enter Value" aria-label="Value" />
+        <input type="number" id="p4" placeholder="Enter Total" aria-label="Total" />
+        <button onclick="calc2()" class="btn btn-primary">Calculate</button>
         <p>Result: <span id="r2">0</span>%</p>
       </div>
 
-      <!-- TYPE 3 -->
+      <!-- PERCENTAGE INCREASE -->
       <div class="calc-box">
-        <h3>Increase X by Y%</h3>
-        <input type="number" id="p5" placeholder="Value" />
-        <input type="number" id="p6" placeholder="Percentage" />
-        <button onclick="calc3()">Calculate</button>
-        <p>Result: <span id="r3">0</span></p>
+        <h3>Percentage Increase</h3>
+        <input type="number" id="p5" placeholder="Original Value" aria-label="Original Value" />
+        <input type="number" id="p6" placeholder="New Value" aria-label="New Value" />
+        <button onclick="calc3()" class="btn btn-primary">Calculate</button>
+        <p>Increase: <span id="r3">0</span>%</p>
       </div>
-    </div>
-    <div class="container seo-content">
+
+      <!-- PERCENTAGE DECREASE -->
+      <div class="calc-box">
+        <h3>Percentage Decrease</h3>
+        <input type="number" id="p7" placeholder="Original Value" aria-label="Original Value" />
+        <input type="number" id="p8" placeholder="New Value" aria-label="New Value" />
+        <button onclick="calc4()" class="btn btn-primary">Calculate</button>
+        <p>Decrease: <span id="r4">0</span>%</p>
+      </div>
+    </main>
+
+    <section class="container seo-content">
       <h2>What is a Percentage Calculator?</h2>
       <p>
-        A percentage calculator is a simple online tool that helps you calculate
-        percentages quickly and accurately. It is commonly used to find values
-        such as percentage increase, percentage decrease, and ratios. Instead of
-        performing manual calculations, this tool provides instant results,
-        saving time and effort.
+        A percentage calculator is a powerful online tool that helps you calculate percentages and perform
+        percentage-related calculations instantly. It eliminates the need for manual calculations and ensures
+        accuracy every time. Whether you need to calculate a percentage of a value, find what percentage one
+        number is of another, or calculate percentage increases and decreases, this tool does it all.
       </p>
 
       <h2>How to Use This Percentage Calculator?</h2>
       <p>
-        This tool is designed to be easy to use for everyone. You can perform
-        different types of percentage calculations depending on your needs.
+        Using this tool is straightforward and requires no mathematical expertise. Simply select the type of
+        calculation you need, enter the numbers, and click calculate to get instant results.
       </p>
       <ul>
-        <li>Enter the required values in the input fields</li>
-        <li>
-          Select the type of calculation (percentage, increase, or decrease)
-        </li>
-        <li>Click the calculate button to get instant results</li>
+        <li>Choose the calculation type you need</li>
+        <li>Enter the required numbers in the input fields</li>
+        <li>Click the "Calculate" button</li>
+        <li>View your result instantly</li>
       </ul>
 
-      <h2>Types of Calculations You Can Perform</h2>
+      <h2>Common Uses for Percentage Calculations</h2>
       <p>
-        This percentage calculator supports multiple types of calculations to
-        help you in different situations.
+        Percentage calculations are essential in many real-world situations. Calculate discounts on shopping,
+        determine tips at restaurants, analyze grades and scores, calculate sales tax, determine profit margins,
+        and track budget changes. Understanding percentages is crucial for financial planning and data analysis.
       </p>
+
+      <h2>Key Features of Our Percentage Calculator</h2>
       <ul>
-        <li>Find what percentage one number is of another</li>
-        <li>Calculate percentage increase or decrease</li>
-        <li>Find a percentage value of a number</li>
+        <li>Calculate percentages of values instantly</li>
+        <li>Determine what percentage one number is of another</li>
+        <li>Calculate percentage increases and decreases</li>
+        <li>Fast and absolutely accurate results</li>
+        <li>Works on all devices without installation</li>
+        <li>Simple, intuitive interface</li>
+        <li>Completely free to use</li>
       </ul>
 
-      <h2>Why Use This Tool?</h2>
+      <h2>Percentage Calculator Explained</h2>
       <p>
-        Calculating percentages manually can be confusing and time-consuming.
-        This tool simplifies the process and ensures accurate results instantly.
-        Whether you are working on school assignments, financial calculations,
-        or business reports, this tool helps you complete your work faster and
-        more efficiently.
+        A percentage is simply a fraction expressed out of 100. For example, 50% means 50 out of 100. Our calculator
+        makes it easy to find percentages, even when dealing with different total amounts. Whether you're calculating
+        13% of 200 or finding what percentage 25 is of 50, this tool handles it instantly and accurately.
       </p>
-
-      <h2>Where is Percentage Calculation Used?</h2>
-      <p>
-        Percentage calculations are used in many real-life situations. Students
-        use them in mathematics, businesses use them to analyze profit and loss,
-        and individuals use them for discounts, taxes, and budgeting. This tool
-        makes all these calculations easy and accessible.
-      </p>
-
-      <h2>Key Features</h2>
-      <ul>
-        <li>Supports multiple percentage calculations</li>
-        <li>Fast and accurate results</li>
-        <li>Easy-to-use interface</li>
-        <li>Works on mobile and desktop devices</li>
-        <li>No signup or installation required</li>
-      </ul>
 
       <h2>Frequently Asked Questions</h2>
 
-      <h3>Can I calculate percentage increase and decrease?</h3>
+      <h3>What types of percentage calculations can this tool perform?</h3>
       <p>
-        Yes, this tool allows you to calculate both percentage increase and
-        decrease easily.
+        This calculator can find what percentage one number is of another, calculate percentage increases and
+        decreases, and determine what percentage of a value equals a specific amount.
       </p>
 
-      <h3>Is this calculator accurate?</h3>
-      <p>
-        Yes, all calculations are performed instantly with accurate results.
-      </p>
+      <h3>Is this percentage calculator accurate?</h3>
+      <p>Yes, this tool uses precise calculations to provide accurate percentage results every time.</p>
+
+      <h3>Can I use this calculator on my mobile device?</h3>
+      <p>Yes, this percentage calculator is fully responsive and works perfectly on all devices.</p>
 
       <h3>Is this tool free to use?</h3>
-      <p>
-        Yes, this percentage calculator is completely free and does not require
-        registration.
-      </p>
-
-      <h3>Can I use it on mobile?</h3>
-      <p>
-        Yes, the tool works smoothly on all devices including smartphones and
-        tablets.
-      </p>
+      <p>Yes, this percentage calculator is completely free with no hidden charges or limitations.</p>
 
       <h2>Related Tools</h2>
       <p>
-        You can also try our
-        <a href="/tools/age-calculator">Age Calculator</a> and
-        <a href="/tools/word-counter">Word Counter</a> for more
-        useful tools.
+        Try our other useful tools like <a href="/tools/word-counter/">Word Counter</a>,
+        <a href="/tools/age-calculator/">Age Calculator</a>, and <a href="/tools/random-number/">Random Number Generator</a>.
       </p>
-    </div>
+    </section>
+
+    <!-- FOOTER COMPONENT - Fetched from /components/footer.html -->
     <div id="footer"></div>
 
     <script src="../../assets/js/main.js"></script>

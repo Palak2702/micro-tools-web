@@ -3,140 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Base64 Encoder & Decoder (Free) - Encode or Decode Text Online</title>
-      -->
-    <title>
-      Base64 Encoder & Decoder Online – Encode & Decode Base64 Instantly
-    </title>
+    <meta name="description" content="Free Base64 encoder and decoder tool to encode text to Base64 or decode Base64 instantly. Fast, secure, and works directly in your browser." />
+    <meta name="theme-color" content="#2563eb" />
 
-    <meta
-      name="description"
-      content="Free Base64 encoder and decoder tool to encode text to Base64 or decode Base64 instantly. Fast, secure, and works directly in your browser."
-    />
+    <title>Base64 Encoder & Decoder Online – Encode & Decode Base64 Instantly</title>
 
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link rel="stylesheet" href="../../assets/css/tools.css" />
   </head>
   <body>
+    <!-- HEADER COMPONENT - Fetched from /components/header.html -->
     <div id="header"></div>
 
-    <div class="container tool-container">
-      <h1>Free Base64 Encoder & Decoder Online</h1>
+    <main class="container tool-container">
+      <h1>🔢 Free Base64 Encoder & Decoder Online</h1>
 
       <p class="tool-intro">
-        Easily encode and decode Base64 strings with our free online Base64
-        encoder and decoder tool. Convert text to Base64 or decode Base64 data
-        instantly. Perfect for developers, APIs, and data transfer tasks.
+        Easily encode and decode Base64 strings with our free online Base64 encoder and decoder tool. Convert text
+        to Base64 or decode Base64 data instantly. Perfect for developers, APIs, and data transfer tasks.
       </p>
 
       <textarea
         id="inputText"
-        placeholder="Enter text or Base64 here..."
+        placeholder="Enter text or Base64 here to encode or decode..."
+        aria-label="Input Text"
       ></textarea>
 
       <div class="action-area">
-        <button id="encodeBtn">Encode</button>
-        <button id="decodeBtn">Decode</button>
+        <button id="encodeBtn" class="btn btn-primary">Encode to Base64</button>
+        <button id="decodeBtn" class="btn btn-primary">Decode from Base64</button>
       </div>
 
       <textarea
         id="outputText"
         placeholder="Result will appear here..."
         readonly
+        aria-label="Result"
       ></textarea>
 
       <div class="action-area">
-        <button id="copyBtn">Copy Result</button>
+        <button id="copyBtn" class="btn btn-secondary">📋 Copy Result</button>
       </div>
-    </div>
-    <div class="container seo-content">
+    </main>
+
+    <section class="container seo-content">
       <h2>What is Base64 Encoding?</h2>
       <p>
-        Base64 encoding is a method used to convert binary or text data into a
-        text format using a set of 64 characters. This encoding is commonly used
-        to safely transmit data over systems that only support text, such as
-        email, URLs, and APIs. It ensures that the data remains intact without
-        being modified during transfer.
+        Base64 encoding is a method used to convert binary data or text into a text-based format using a set of
+        64 ASCII characters. This encoding is commonly used to safely transmit data over systems that only support
+        text, such as email, URLs, APIs, and web services. It ensures that the data remains intact and uncorrupted
+        without being modified during transfer.
       </p>
 
       <h2>What is Base64 Decoding?</h2>
       <p>
-        Base64 decoding is the process of converting encoded Base64 data back
-        into its original format. This is useful when you receive encoded data
-        and need to restore it to its original readable or usable form.
+        Base64 decoding is the reverse process of converting encoded Base64 data back into its original readable
+        format. This is useful when you receive encoded data from an API or other source, and you need to restore
+        it to its original, usable form.
       </p>
 
       <h2>How to Use This Base64 Encoder & Decoder?</h2>
       <p>
-        This tool is simple and easy to use. You can encode or decode text
-        within seconds without any technical knowledge.
+        This tool is simple and intuitive to use. You can encode or decode text within seconds without any technical
+        knowledge required.
       </p>
       <ul>
         <li>Enter your text or Base64 string into the input box</li>
-        <li>Click "Encode" to convert text to Base64</li>
-        <li>Click "Decode" to convert Base64 back to text</li>
-        <li>Copy the result instantly</li>
+        <li>Click "Encode to Base64" to convert text into Base64 format</li>
+        <li>Click "Decode from Base64" to convert Base64 back to text</li>
+        <li>Copy the result instantly with one click</li>
       </ul>
 
       <h2>Why Use Base64 Encoding?</h2>
       <p>
-        Base64 encoding is widely used in web development and data handling. It
-        helps in embedding images in HTML or CSS, transmitting binary data in
-        APIs, and ensuring compatibility across different systems. It is
-        especially useful when working with JSON data, tokens, and file
-        transfers.
+        Base64 encoding is widely used in web development and data handling. It helps in embedding images in HTML
+        or CSS as data URIs, transmitting binary data through APIs, and ensuring compatibility across different
+        systems and platforms. It is especially useful when working with JSON data, authentication tokens, and file transfers.
       </p>
 
       <h2>Key Features of This Tool</h2>
       <ul>
         <li>Encode and decode Base64 instantly</li>
-        <li>Fast and accurate results</li>
-        <li>Works directly in your browser</li>
-        <li>No data storage or tracking</li>
-        <li>Compatible with all devices</li>
+        <li>Fast and absolutely accurate results</li>
+        <li>Works directly in your browser without server transmission</li>
+        <li>No data storage or third-party tracking</li>
+        <li>Compatible with all devices and browsers</li>
+        <li>One-click copy functionality</li>
+        <li>Simple, clean interface</li>
       </ul>
 
-      <h2>Is This Base64 Tool Safe?</h2>
+      <h2>Is This Base64 Tool Safe and Secure?</h2>
       <p>
-        Yes, this tool is completely safe. All encoding and decoding operations
-        are performed locally in your browser. No data is sent to any server,
-        ensuring full privacy and security.
+        Yes, this tool is completely safe and secure. All encoding and decoding operations are performed locally
+        in your browser. No data is sent to any external server, ensuring full privacy and security for all your data.
       </p>
 
       <h2>Common Use Cases</h2>
       <p>
-        Developers use Base64 encoding for API authentication, embedding files,
-        and handling binary data. It is also used in email systems, data URIs,
-        and secure data transmission. This tool makes it easy to perform these
-        tasks without writing code.
+        Developers use Base64 encoding for API authentication, embedding files and images, and handling binary data
+        in JSON payloads. It is also used in email systems for encoding attachments, data URIs for inline resources,
+        and secure data transmission. This tool makes it easy to perform these tasks without writing any code.
       </p>
 
       <h2>Frequently Asked Questions</h2>
 
       <h3>What is Base64 used for?</h3>
       <p>
-        Base64 is used to encode data for safe transmission over text-based
-        systems.
+        Base64 is used to encode binary or text data for safe transmission over text-only systems and protocols.
       </p>
 
-      <h3>Can I decode Base64 here?</h3>
-      <p>Yes, you can both encode and decode Base64 using this tool.</p>
+      <h3>Can I decode Base64 using this tool?</h3>
+      <p>Yes, you can both encode text to Base64 and decode Base64 back to text using this single tool.</p>
 
-      <h3>Is this tool free?</h3>
-      <p>Yes, this Base64 encoder and decoder is completely free.</p>
+      <h3>Is this Base64 tool free?</h3>
+      <p>Yes, this Base64 encoder and decoder is completely free to use with no limitations.</p>
 
-      <h3>Is my data stored?</h3>
-      <p>No, all processing happens in your browser and no data is stored.</p>
+      <h3>Is my data stored anywhere?</h3>
+      <p>No, all processing happens entirely in your browser and no data is stored on our servers.</p>
 
       <h2>Related Tools</h2>
       <p>
-        You can also try our
-        <a href="/tools/password-generator">Password Generator</a>
-        and <a href="/tools/case-converter">Case Converter</a> for
-        more useful utilities.
+        Try our other useful tools like <a href="/tools/password-generator/">Password Generator</a>,
+        <a href="/tools/case-converter/">Case Converter</a>, and <a href="/tools/uuid-generator/">UUID Generator</a>.
       </p>
-    </div>
+    </section>
 
+    <!-- FOOTER COMPONENT - Fetched from /components/footer.html -->
     <div id="footer"></div>
 
     <script src="../../assets/js/main.js"></script>

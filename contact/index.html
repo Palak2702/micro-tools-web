@@ -3,57 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us – Free Online Tools</title>
-    <meta
-      name="description"
-      content="Contact us for questions, feedback or suggestions regarding our free online tools platform."
-    />
+    <meta name="description" content="Contact FreeToolsZone for questions, feedback or suggestions regarding our free online tools platform." />
+    <meta name="theme-color" content="#2563eb" />
 
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <title>Contact Us – Free Online Tools</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
+    <!-- HEADER COMPONENT - Fetched from /components/header.html -->
     <div id="header"></div>
 
-    <div class="container contact-container">
-      <h1 class="page-title">Contact Us</h1>
+    <main class="container contact-container" style="max-width: 900px; margin: 0 auto; padding: 20px;">
+      <h1 class="page-title" style="margin-top: 40px;">Contact Us</h1>
 
       <div class="card">
-        <p class="tool-intro">
-          Have questions, suggestions, or feedback? We'd love to hear from you.
-          Feel free to reach out anytime.
+        <p class="tool-intro" style="margin: 0;">
+          Have questions, suggestions, or feedback? We'd love to hear from you. Whether you have a tool suggestion,
+          found a bug, or just want to share your experience, please feel free to reach out anytime.
         </p>
       </div>
 
       <div class="card">
-        <h2>Get in Touch</h2>
+        <h2>📝 Get in Touch</h2>
+        <p>We appreciate hearing from our users about:</p>
         <ul>
-          <li>Tool suggestions</li>
-          <li>Bug reports</li>
-          <li>Feedback & improvements</li>
-          <li>Business inquiries</li>
+          <li>Tool suggestions and feature requests</li>
+          <li>Bug reports and issues</li>
+          <li>Feedback and improvement ideas</li>
+          <li>Business inquiries and partnerships</li>
+          <li>General questions and support</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>Email Support</h2>
-        <!-- <p>📧 <strong>your@email.com</strong></p> -->
-        <p>We usually respond within 24–48 hours.</p>
+        <h2>💬 Contact Information</h2>
+        <p style="margin: 8px 0;">
+          <strong>Email Support:</strong><br>
+          Please fill out the form below and we'll get back to you within 24-48 hours.
+        </p>
+        <p style="margin: 0;">
+          We value your feedback and will provide a thoughtful response to all inquiries.
+        </p>
       </div>
 
       <div class="card">
-        <h2>Quick Contact Form</h2>
+        <h2>✉️ Quick Contact Form</h2>
 
         <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </div>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-label="Your Name" />
+          </div>
 
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-label="Your Email" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What is your message about?" required aria-label="Subject" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Please tell us your feedback, suggestion, or issue in detail..." rows="6" required aria-label="Message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+        </form>
+
+        <p style="font-size: 13px; color: var(--text-tertiary); margin-top: 16px; text-align: center;">
+          We respect your privacy. Your information will only be used to respond to your inquiry.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>🎯 What Happens Next?</h2>
+        <p>
+          <strong>1. Receive your message</strong><br>
+          We'll process all messages and typically respond within 24-48 hours.
+        </p>
+        <p>
+          <strong>2. Review and respond</strong><br>
+          Our team will carefully review your feedback and provide a helpful response.
+        </p>
+        <p>
+          <strong>3. Take action</strong><br>
+          If it's a suggestion, we'll consider it for future development. If it's a bug, we'll investigate and fix it.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>💡 Tips for Your Message</h2>
+        <ul>
+          <li>Be clear and specific about what you want to communicate</li>
+          <li>Include your contact information (we'll use your email)</li>
+          <li>For bug reports, describe the steps to reproduce the issue</li>
+          <li>For feature requests, explain how it would improve your experience</li>
+          <li>Be patient - we'll get back to you as soon as possible</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>FAQs</h2>
+        <p>
+          <strong>How long does it take to get a response?</strong><br>
+          We aim to respond to all inquiries within 24-48 hours during business days.
+        </p>
+        <p>
+          <strong>Will my data be safe?</strong><br>
+          Yes, we value your privacy. We won't share your information with third parties.
+        </p>
+        <p>
+          <strong>Can I report a security issue?</strong><br>
+          Yes, please describe the issue in your message and mark it as urgent.
+        </p>
+      </div>
+
+      <div class="card" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1)); border-color: var(--primary);">
+        <h2 style="color: var(--primary);">Thank You!</h2>
+        <p>
+          Thank you for using FreeToolsZone and for taking the time to reach out. Your feedback helps us create
+          better tools for everyone. We're excited to hear from you!
+        </p>
+      </div>
+    </main>
+
+    <!-- FOOTER COMPONENT - Fetched from /components/footer.html -->
     <div id="footer"></div>
 
-    <script src="../../assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
