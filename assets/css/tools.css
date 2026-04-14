@@ -4,6 +4,7 @@
 
 /* Tool container */
 .tool-container {
+  text-align: center;
   margin-top: 40px;
   padding: 0 20px;
   flex: 1;
@@ -18,11 +19,11 @@
 
 /* Tool intro text */
 .tool-intro {
+  text-align: center;
   font-size: 15px;
   color: var(--text-secondary);
   margin-bottom: 32px;
   line-height: 1.7;
-  max-width: 600px;
 }
 
 /* ========================================
@@ -109,9 +110,10 @@ button:active {
 .action-area {
   margin-top: 20px;
   margin-bottom: 32px;
-  display: flex;
+  /* display: flex; */
   gap: 12px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 /* ========================================
@@ -336,6 +338,7 @@ button:active {
 
 @media (max-width: 768px) {
   .tool-container {
+    text-align: center;
     margin-top: 30px;
     padding: 0 16px;
   }
@@ -346,7 +349,8 @@ button:active {
 
   textarea {
     min-height: 140px;
-    font-size: 16px; /* Prevents zoom on mobile */
+    font-size: 16px;
+    /* Prevents zoom on mobile */
   }
 
   .results {
@@ -369,7 +373,8 @@ button:active {
   }
 
   .input-group input {
-    font-size: 16px; /* Prevents zoom on mobile */
+    font-size: 16px;
+    /* Prevents zoom on mobile */
   }
 }
 
@@ -413,6 +418,7 @@ button:active {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -424,6 +430,7 @@ button:active {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -432,6 +439,7 @@ button:active {
 
 /* Ensure animations respect prefer-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
