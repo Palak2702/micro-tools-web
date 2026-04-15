@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Analyze text instantly with word count, character count, reading time, speaking time, paragraphs, and SEO insights. Free advanced text analyzer tool."
+    />
+
+    <meta
+      name="keywords"
+      content="text analyzer tool, word counter, reading time calculator, seo text analysis, character counter, sentence counter, writing analysis tool"
+    />
+
+    <title>
+      Advanced Text Analyzer Tool – Word Count, Reading Time, SEO Analysis
+    </title>
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/tools.css" />
+  </head>
+  <body>
+    <!-- HEADER COMPONENT - Fetched from /components/header.html -->
+    <div id="header"></div>
+
+    <main class="container tool-container">
+      <h1>🚀 Advanced Text Analyzer</h1>
+      <p class="subtitle">
+        Analyze your text instantly – word count, reading time, SEO insights &
+        more
+      </p>
+
+      <textarea id="textInput"></textarea>
+      <div class="action-buttons">
+        <button onclick="analyzeText()">Analyze Text</button>
+        <button class="secondary" onclick="clearText()">Clear</button>
+      </div>
+
+      <div class="results" aria-live="polite" aria-atomic="true">
+        <p>Words<span id="wordCount">0</span></p>
+        <p>Unique Words<span id="uniqueWords">0</span></p>
+        <p>Characters (with spaces)<span id="charWithSpace">0</span></p>
+        <p>Characters (without spaces)<span id="charWithoutSpace">0</span></p>
+        <p>Sentences<span id="sentenceCount">0</span></p>
+        <p>Lines<span id="lineCount">0</span></p>
+        <p>Paragraphs <span id="paragraphCount">0</span></p>
+        <p>Pages <span id="pages">0</span></p>
+        <p>Speaking Time<span id="speakingTime">0</span></p>
+        <p>Reading Time<span id="readingTime">0</span> min</p>
+      </div>
+      <!-- SEO ANALYSIS -->
+      <div class="seo-analysis">
+        <h2>📊 SEO & Readability Analysis</h2>
+
+        <div class="results-grid">
+          <div class="card">
+            <span>Readability Score</span>
+            <strong id="readability">0</strong>
+          </div>
+
+          <div class="card">
+            <span>Avg Sentence Length</span>
+            <strong id="avgSentence">0</strong>
+          </div>
+
+          <div class="card">
+            <span>Passive Voice %</span>
+            <strong id="passive">0%</strong>
+          </div>
+
+          <div class="card">
+            <span>SEO Score</span>
+            <strong id="seoScore">0</strong>
+          </div>
+        </div>
+
+        <!-- SEO BAR -->
+        <div class="seo-bar">
+          <div id="seoFill"></div>
+        </div>
+      </div>
+
+      <!-- KEYWORD DENSITY -->
+      <div class="keyword-section">
+        <h2>🔑 Top Keywords</h2>
+        <ul id="keywordList"></ul>
+      </div>
+    </main>
+
+    <section class="container seo-content">
+      <h2>Explore Related Tools</h2>
+      <p>
+        Use
+        <a href="/tools/word-counter/">Word Counter</a>,
+        <a href="/tools/character-counter/">Character Counter</a>, and
+        <a href="/tools/sentence-counter/">Sentence Counter</a>.
+      </p>
+      <h2>Advanced Text Analyzer – Complete Writing Analysis Tool</h2>
+      <p>
+        The advanced text analyzer provides detailed insights into your content,
+        including word count, unique words, paragraphs, reading time, speaking
+        time, and more. It is designed for writers, bloggers, and SEO
+        professionals.
+      </p>
+
+      <h2>What is a Text Analyzer?</h2>
+      <p>
+        A text analyzer evaluates your content and provides multiple metrics to
+        help improve readability, structure, and engagement.
+      </p>
+
+      <h2>What You Can Analyze</h2>
+      <ul>
+        <li>Total words and unique words</li>
+        <li>Character count</li>
+        <li>Sentence and paragraph structure</li>
+        <li>Reading time</li>
+        <li>Speaking time</li>
+        <li>Estimated pages</li>
+      </ul>
+
+      <h2>Why Use a Text Analyzer?</h2>
+      <p>
+        Understanding your content helps you improve writing quality and SEO
+        performance. It allows you to optimize structure, readability, and
+        engagement.
+      </p>
+
+      <h2>Reading Time vs Speaking Time</h2>
+      <p>
+        Reading speed is faster than speaking. This tool calculates both,
+        helping you plan scripts, presentations, and content length effectively.
+      </p>
+
+      <h2>How to Improve Content Using Data</h2>
+      <ul>
+        <li>Use shorter paragraphs</li>
+        <li>Maintain consistent sentence length</li>
+        <li>Avoid repeating words</li>
+        <li>Optimize reading time</li>
+      </ul>
+
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Blog writing</li>
+        <li>YouTube scripts</li>
+        <li>Speech preparation</li>
+        <li>SEO content optimization</li>
+      </ul>
+
+      <h2>Hindi Guide</h2>
+      <p>
+        Aap apne content ka complete analysis yaha kar sakte hain. Yeh tool
+        Hindi aur Hinglish dono support karta hai.
+      </p>
+
+      <h2>Benefits of Using This Tool</h2>
+      <ul>
+        <li>Better readability</li>
+        <li>Improved engagement</li>
+        <li>SEO optimization</li>
+        <li>Time-saving</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Is this tool free?</h3>
+      <p>Yes, it is completely free.</p>
+
+      <h3>Does it store data?</h3>
+      <p>No, your data is not stored.</p>
+    </section>
+
+    <!-- FOOTER COMPONENT - Fetched from /components/footer.html -->
+    <div id="footer"></div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/text-analyzer.js"></script>
+  </body>
+</html>

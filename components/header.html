@@ -1,64 +1,99 @@
 <header class="header">
   <div class="container header-flex">
+
+    <!-- LOGO -->
     <div class="logo">
-     
-      <a href="/"> <img src="../assets/img/logo.png" width="10%">FreeToolsZone</a>
+      <a href="/">
+        <img src="/assets/img/logo.png" alt="FreeToolsZone Logo" style="height:32px; vertical-align:middle;">
+        <span style="margin-left:8px;">FreeToolsZone</span>
+      </a>
     </div>
 
+    <!-- HAMBURGER -->
     <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- DESKTOP NAV -->
     <nav class="nav" id="nav">
       <a href="/" class="nav-link">Home</a>
 
+      <!-- BLOG LINK -->
+      <a href="/blogs/" class="nav-link">Blog</a>
+
+      <!-- TOOLS DROPDOWN -->
       <div class="dropdown">
         <button class="dropbtn" id="toolsBtn">
-          Tools
-          <span style="margin-left: 4px;">▾</span>
+          Tools <span style="margin-left:4px;">▾</span>
         </button>
 
         <div class="dropdown-content" id="toolsDropdown">
+
+          <!-- MAIN SEO TOOLS FIRST -->
           <a href="/tools/word-counter/">Word Counter</a>
+          <a href="/tools/character-counter/">Character Counter</a>
+          <a href="/tools/sentence-counter/">Sentence Counter</a>
+          <a href="/tools/text-analyzer/">Text Analyzer</a>
+
+          <hr>
+
+          <!-- OTHER TOOLS -->
           <a href="/tools/age-calculator/">Age Calculator</a>
           <a href="/tools/password-generator/">Password Generator</a>
+          <a href="/tools/password-checker/">Password Checker</a>
           <a href="/tools/percentage-calculator/">Percentage Calculator</a>
           <a href="/tools/base64-encoder-decoder/">Base64 Tool</a>
           <a href="/tools/case-converter/">Case Converter</a>
           <a href="/tools/random-number/">Random Number</a>
           <a href="/tools/uuid-generator/">UUID Generator</a>
-          <a href="/tools/whatsapp-link-generator/">WhatsApp Link</a>
+          <a href="/tools/whatsapp-link-generator/">WhatsApp Link Generator</a>
+
         </div>
       </div>
 
-      <a href="/about/" class="nav-link">About Us</a>
-      <a href="/contact/" class="nav-link">Contact Us</a>
+      <a href="/about/" class="nav-link">About</a>
+      <a href="/contact/" class="nav-link">Contact</a>
     </nav>
+
   </div>
 
-  <!-- Mobile menu -->
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
+
     <a href="/" class="nav-link">Home</a>
+    <a href="/blogs/" class="nav-link">Blog</a>
 
     <button class="mobile-dropdown-toggle" id="mobileToolsBtn">
-      Tools
-      <span style="margin-left: 4px;">▾</span>
+      Tools <span style="margin-left:4px;">▾</span>
     </button>
+
     <div class="mobile-dropdown-content" id="mobileToolsDropdown">
+
+      <!-- MAIN SEO TOOLS -->
       <a href="/tools/word-counter/">Word Counter</a>
+      <a href="/tools/character-counter/">Character Counter</a>
+      <a href="/tools/sentence-counter/">Sentence Counter</a>
+      <a href="/tools/text-analyzer/">Text Analyzer</a>
+
+      <hr>
+
+      <!-- OTHER TOOLS -->
       <a href="/tools/age-calculator/">Age Calculator</a>
       <a href="/tools/password-generator/">Password Generator</a>
+      <a href="/tools/password-checker/">Password Checker</a>
       <a href="/tools/percentage-calculator/">Percentage Calculator</a>
       <a href="/tools/base64-encoder-decoder/">Base64 Tool</a>
       <a href="/tools/case-converter/">Case Converter</a>
       <a href="/tools/random-number/">Random Number</a>
       <a href="/tools/uuid-generator/">UUID Generator</a>
-      <a href="/tools/whatsapp-link-generator/">WhatsApp Link</a>
+      <a href="/tools/whatsapp-link-generator/">WhatsApp Link Generator</a>
+
     </div>
 
-    <a href="/about/" class="nav-link">About Us</a>
-    <a href="/contact/" class="nav-link">Contact Us</a>
+    <a href="/about/" class="nav-link">About</a>
+    <a href="/contact/" class="nav-link">Contact</a>
+
   </div>
 </header>

@@ -133,7 +133,7 @@ main {
 
 .logo a {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary);
   text-decoration: none;
   letter-spacing: -0.5px;
@@ -163,6 +163,11 @@ main {
   border-radius: var(--radius);
   transition: var(--transition);
   white-space: nowrap;
+}
+
+.nav a[href="/blogs/"] {
+  color: #2563eb;
+  font-weight: 600;
 }
 
 .nav a:hover {
@@ -246,6 +251,12 @@ main {
   color: var(--primary);
   background: var(--bg-light);
   border-left-color: var(--primary);
+}
+.dropdown-content hr,
+.mobile-dropdown-content hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 8px 0;
 }
 
 /* Hamburger menu */
@@ -948,4 +959,22 @@ label {
     border-radius: 6px;
     margin-top: 15px;
     font-size: 13px;
+}
+.links {
+  margin-top: 15px;
+}
+.links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+.info-box {
+  background: #f1f5ff;
+  border-left: 4px solid #2563eb;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-size: 13px;
 }
