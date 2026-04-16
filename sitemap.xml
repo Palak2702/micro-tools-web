@@ -10,161 +10,25 @@
 </url>
 
 <!-- ================= TOOLS ================= -->
-
 <url>
-  <loc>https://freetoolszone.in/tools/word-counter/</loc>
+  <loc>https://freetoolszone.in/tools/youtube/youtube-income-calculator.html</loc>
+  <lastmod>2026-04-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://freetoolszone.in/tools/youtube/youtube-shorts-calculator.html</loc>
+  <lastmod>2026-04-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://freetoolszone.in/tools/youtube/youtube-cpm-calculator.html</loc>
   <lastmod>2026-04-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 
-<url>
-  <loc>https://freetoolszone.in/tools/character-counter/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
 
-<url>
-  <loc>https://freetoolszone.in/tools/sentence-counter/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/text-analyzer/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>1.0</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/age-calculator/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/percentage-calculator/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/password-generator/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/password-checker/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/base64-encoder-decoder/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/case-converter/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/random-number/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/uuid-generator/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/tools/whatsapp-link-generator/</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<!-- ================= BLOGS (SEO CLUSTER) ================= -->
-
-<url>
-  <loc>https://freetoolszone.in/blogs/index.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/blogs/text-analyzer-tool-guide.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/blogs/word-counter-guide.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/blogs/character-counter-guide.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/blogs/sentence-length-readability.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/blogs/ideal-word-count-seo.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/blogs/how-many-words-per-page.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/blogs/character-limit-instagram.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://freetoolszone.in/blogs/word-vs-character-count.html</loc>
-  <lastmod>2026-04-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
 
 </urlset>

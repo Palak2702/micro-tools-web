@@ -1,0 +1,117 @@
+
+/* =========================================
+   YOUTUBE PAGE SPECIFIC STYLES ONLY
+   (Global CSS handles base layout)
+========================================= */
+
+
+/* HERO OVERRIDE (YouTube Branding) */
+.hero {
+  width: 100%;
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  color: white;
+  text-align: center;
+  padding: 80px 20px 120px;
+}
+
+/* TOOL TITLE */
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+
+/* LABELS */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+
+/* INPUT ENHANCEMENT */
+input, select {
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff0000;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255,0,0,0.1);
+}
+
+
+/* RESULT CARDS (for income/shorts pages) */
+.results {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.result-card {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background: #eef2ff;
+  transition: 0.3s;
+}
+
+.result-card:hover {
+  transform: translateY(-3px);
+}
+
+.result-card:nth-child(2) {
+  background: #ff0000;
+  color: white;
+}
+
+
+/* INSIGHT TEXT */
+#insight {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+/* CHART CONTAINER */
+canvas {
+  margin-top: 20px;
+}
+
+
+/* SEO CONTENT */
+.content h2 {
+  margin-top: 30px;
+}
+
+.content h3 {
+  margin-top: 20px;
+}
+
+.content p {
+  color: #444;
+}
+
+
+/* =========================================
+   MOBILE IMPROVEMENTS
+========================================= */
+
+@media (max-width: 768px) {
+
+  .results {
+    flex-direction: column;
+  }
+
+  .result-card {
+    width: 100%;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+}

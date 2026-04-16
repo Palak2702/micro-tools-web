@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate strong and secure passwords instantly. Free password generator with symbols, numbers and custom length."
+    />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" href="../assets/img/logo.png" />
+    <title>
+      Password Generator (Strong & Secure) – Create Random Password Online
+    </title>
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/tools.css" />
+  </head>
+  <body>
+    <!-- HEADER COMPONENT - Fetched from /components/header.html -->
+    <div id="header"></div>
+
+    <main class="container tool-container">
+      <h1>🔐 Password Generator Online</h1>
+
+      <p class="tool-intro">
+        Create strong and secure passwords instantly with our free password
+        generator. Customize password length and include uppercase letters,
+        lowercase letters, numbers, and symbols to improve your online security.
+        Perfect for protecting accounts, emails, and sensitive data.
+      </p>
+
+      <div class="form-group">
+        <label for="length">Password Length</label>
+        <input
+          type="number"
+          id="length"
+          value="12"
+          min="4"
+          max="50"
+          aria-label="Password Length"
+        />
+      </div>
+
+      <div class="checkbox-group">
+        <label>
+          <input
+            type="checkbox"
+            id="uppercase"
+            checked
+            aria-label="Include Uppercase Letters"
+          />
+          Uppercase (A-Z)
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            id="lowercase"
+            checked
+            aria-label="Include Lowercase Letters"
+          />
+          Lowercase (a-z)
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            id="numbers"
+            checked
+            aria-label="Include Numbers"
+          />
+          Numbers (0-9)
+        </label>
+        <label>
+          <input type="checkbox" id="symbols" aria-label="Include Symbols" />
+          Symbols (!@#$)
+        </label>
+      </div>
+
+      <div class="action-area">
+        <button id="generateBtn" class="btn btn-primary">
+          Generate Password
+        </button>
+      </div>
+      <div class="tip-box">
+        🔐 Tip: Use at least 12 characters for strong security.
+      </div>
+      <div class="results" aria-live="polite" aria-atomic="true">
+        <p id="passwordResult">Your password will appear here</p>
+      </div>
+
+      <div class="action-area">
+        <button id="copyBtn" class="btn btn-secondary">📋 Copy Password</button>
+      </div>
+    </main>
+
+    <section class="container seo-content">
+      <h2>What is a Password Generator?</h2>
+      <p>
+        A password generator is a powerful online tool that helps you create
+        strong, random, and secure passwords instantly. Instead of using weak or
+        predictable passwords, this tool generates complex combinations of
+        letters, numbers, and symbols to significantly improve your online
+        security. Strong passwords are absolutely essential for protecting your
+        accounts from unauthorized access and serious cyber threats.
+      </p>
+
+      <h2>Why Are Strong Passwords Important?</h2>
+      <p>
+        Weak passwords are one of the main reasons for account hacking and data
+        breaches. Using simple passwords like "123456" or "password" makes your
+        accounts extremely vulnerable to attacks. A strong password includes a
+        diverse mix of uppercase and lowercase letters, numbers, and special
+        characters, making it nearly impossible for hackers to guess or crack
+        through brute force attacks.
+      </p>
+
+      <h2>How to Use This Password Generator?</h2>
+      <p>
+        This tool is easy to use and allows you to customize your password based
+        on your specific security needs.
+      </p>
+      <ul>
+        <li>Select your desired password length between 4 and 50 characters</li>
+        <li>
+          Choose character types: uppercase, lowercase, numbers, and symbols
+        </li>
+        <li>Click the generate button to create your password</li>
+        <li>Copy the password and use it immediately</li>
+        <li>Generate a new password if needed</li>
+      </ul>
+
+      <h2>Key Features of This Tool</h2>
+      <ul>
+        <li>Generate strong and truly random passwords instantly</li>
+        <li>Customizable password length (4-50 characters)</li>
+        <li>Option to include or exclude symbols, numbers, and letters</li>
+        <li>Works perfectly on all devices (mobile, tablet, desktop)</li>
+        <li>No signup or installation required</li>
+        <li>One-click copy functionality for convenience</li>
+        <li>Unlimited password generation</li>
+      </ul>
+
+      <h2>Is This Password Generator Safe?</h2>
+      <p>
+        Yes, this password generator is completely safe to use. All passwords
+        are generated locally in your browser, and no data is stored or sent to
+        any server. This ensures maximum privacy and security for all users.
+      </p>
+
+      <h2>Best Practices for Creating Strong Passwords</h2>
+      <p>
+        To keep your accounts secure, always use unique passwords for different
+        platforms and services. Avoid using personal information like your name
+        or date of birth. Use long passwords (minimum 12 characters) with a
+        diverse mix of character types. Update your passwords regularly for
+        better protection, especially after security incidents.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Are generated passwords secure?</h3>
+      <p>
+        Yes, the passwords are randomly generated using secure algorithms and
+        are highly resistant to hacking.
+      </p>
+
+      <h3>Can I customize my password?</h3>
+      <p>
+        Yes, you can choose the length and character types (uppercase,
+        lowercase, numbers, symbols) according to your specific needs.
+      </p>
+
+      <h3>Is this password generator free?</h3>
+      <p>
+        Yes, this password generator is completely free to use with no
+        limitations.
+      </p>
+
+      <h3>Is my data stored or tracked?</h3>
+      <p>
+        No, everything runs in your browser and no data is stored or tracked by
+        us.
+      </p>
+
+      <h2>Related Tools</h2>
+      <p>
+        Try our other useful tools like
+        <a href="/tools/misc/base64-encoder-decoder/">Base64 Tool</a>,
+        <a href="/tools/misc/random-number/">Random Number Generator</a>, and
+        <a href="/tools/misc/uuid-generator/">UUID Generator</a>.
+      </p>
+    </section>
+
+    <!-- FOOTER COMPONENT - Fetched from /components/footer.html -->
+    <div id="footer"></div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/password.js"></script>
+  </body>
+</html>

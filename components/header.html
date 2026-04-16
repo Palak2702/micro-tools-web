@@ -1,99 +1,79 @@
 <header class="header">
   <div class="container header-flex">
+    <link rel="stylesheet" href="/assets/css/global.css">
 
     <!-- LOGO -->
     <div class="logo">
-      <a href="/">
-        <img src="/assets/img/logo.png" alt="FreeToolsZone Logo" style="height:32px; vertical-align:middle;">
-        <span style="margin-left:8px;">FreeToolsZone</span>
+      <a href="/" title="FreeToolsZone - Smart Tools for India">
+        <img src="/assets/img/logo.png" alt="FreeToolsZone Logo" height="32">
+        <span>FreeToolsZone</span>
       </a>
     </div>
 
     <!-- HAMBURGER -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+    <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <!-- DESKTOP NAV -->
+    <!-- NAV -->
     <nav class="nav" id="nav">
+
       <a href="/" class="nav-link">Home</a>
 
-      <!-- BLOG LINK -->
-      <a href="/blogs/" class="nav-link">Blog</a>
-
-      <!-- TOOLS DROPDOWN -->
+      <!-- MAIN CATEGORY -->
       <div class="dropdown">
-        <button class="dropbtn" id="toolsBtn">
-          Tools <span style="margin-left:4px;">▾</span>
+        <button class="dropbtn">
+          YouTube Tools ▾
         </button>
 
-        <div class="dropdown-content" id="toolsDropdown">
-
-          <!-- MAIN SEO TOOLS FIRST -->
-          <a href="/tools/word-counter/">Word Counter</a>
-          <a href="/tools/character-counter/">Character Counter</a>
-          <a href="/tools/sentence-counter/">Sentence Counter</a>
-          <a href="/tools/text-analyzer/">Text Analyzer</a>
-
-          <hr>
-
-          <!-- OTHER TOOLS -->
-          <a href="/tools/age-calculator/">Age Calculator</a>
-          <a href="/tools/password-generator/">Password Generator</a>
-          <a href="/tools/password-checker/">Password Checker</a>
-          <a href="/tools/percentage-calculator/">Percentage Calculator</a>
-          <a href="/tools/base64-encoder-decoder/">Base64 Tool</a>
-          <a href="/tools/case-converter/">Case Converter</a>
-          <a href="/tools/random-number/">Random Number</a>
-          <a href="/tools/uuid-generator/">UUID Generator</a>
-          <a href="/tools/whatsapp-link-generator/">WhatsApp Link Generator</a>
-
+        <div class="dropdown-content">
+          <a href="/tools/youtube/youtube-income-calculator.html">YouTube Income Calculator India</a>
+          <a href="/tools/youtube/youtube-shorts-calculator.html">YouTube Shorts Calculator</a>
+          <a href="/tools/youtube/youtube-cpm-calculator.html">YouTube CPM Calculator India</a>
         </div>
       </div>
 
+      <!-- FUTURE CATEGORY -->
+      <!-- <div class="dropdown">
+        <button class="dropbtn">
+          Govt Tools ▾
+        </button>
+
+        <div class="dropdown-content">
+          <a href="#">PM Kisan Eligibility Tool</a>
+          <a href="#">EWS Eligibility Calculator</a>
+          <a href="#">Ayushman Card Checker</a>
+        </div>
+      </div> -->
+
+      <!-- BLOG -->
+      <a href="/blogs/" class="nav-link">Guides</a>
+
       <a href="/about/" class="nav-link">About</a>
       <a href="/contact/" class="nav-link">Contact</a>
+
     </nav>
-
   </div>
-
   <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu">
 
-    <a href="/" class="nav-link">Home</a>
-    <a href="/blogs/" class="nav-link">Blog</a>
+  <a href="/" class="nav-link">Home</a>
 
-    <button class="mobile-dropdown-toggle" id="mobileToolsBtn">
-      Tools <span style="margin-left:4px;">▾</span>
-    </button>
+  <button class="mobile-dropdown-toggle" id="mobileToolsBtn">
+    YouTube Tools ▾
+  </button>
 
-    <div class="mobile-dropdown-content" id="mobileToolsDropdown">
-
-      <!-- MAIN SEO TOOLS -->
-      <a href="/tools/word-counter/">Word Counter</a>
-      <a href="/tools/character-counter/">Character Counter</a>
-      <a href="/tools/sentence-counter/">Sentence Counter</a>
-      <a href="/tools/text-analyzer/">Text Analyzer</a>
-
-      <hr>
-
-      <!-- OTHER TOOLS -->
-      <a href="/tools/age-calculator/">Age Calculator</a>
-      <a href="/tools/password-generator/">Password Generator</a>
-      <a href="/tools/password-checker/">Password Checker</a>
-      <a href="/tools/percentage-calculator/">Percentage Calculator</a>
-      <a href="/tools/base64-encoder-decoder/">Base64 Tool</a>
-      <a href="/tools/case-converter/">Case Converter</a>
-      <a href="/tools/random-number/">Random Number</a>
-      <a href="/tools/uuid-generator/">UUID Generator</a>
-      <a href="/tools/whatsapp-link-generator/">WhatsApp Link Generator</a>
-
-    </div>
-
-    <a href="/about/" class="nav-link">About</a>
-    <a href="/contact/" class="nav-link">Contact</a>
-
+  <div class="mobile-dropdown-content" id="mobileToolsDropdown">
+    <a href="/tools/youtube/youtube-income-calculator.html">Income Calculator</a>
+    <a href="/tools/youtube/youtube-shorts-calculator.html">Shorts Calculator</a>
+    <a href="/tools/youtube/youtube-cpm-calculator.html">CPM Calculator</a>
   </div>
+
+  <a href="/blogs/" class="nav-link">Guides</a>
+  <a href="/about/" class="nav-link">About</a>
+  <a href="/contact/" class="nav-link">Contact</a>
+
+</div>
 </header>

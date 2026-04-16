@@ -1,0 +1,415 @@
+
+/* =========================================
+   1. RESET + GLOBAL BASE
+========================================= */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fb;
+  color: #111827;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+section {
+  /* margin-top: 60px; */
+  margin-top: 0;
+}
+
+/* =========================================
+   2. HEADER (GLOBAL NAVIGATION)
+========================================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* LOGO */
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+}
+
+.logo img {
+  margin-right: 8px;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: #ff0000;
+}
+
+/* =========================================
+   3. DROPDOWN (DESKTOP)
+========================================= */
+
+.dropdown {
+  position: relative;
+  margin-left: 20px;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #fff;
+  min-width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: #f5f7fb;
+  padding-left: 18px;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================================
+   4. HAMBURGER (MOBILE)
+========================================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ANIMATION */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =========================================
+   5. MOBILE MENU
+========================================= */
+
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  width: 85%;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  transition: 0.3s ease;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.mobile-menu.show {
+  right: 0;
+}
+
+.mobile-menu a {
+  display: block;
+  margin: 12px 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* MOBILE DROPDOWN */
+.mobile-dropdown-content {
+  display: none;
+  padding-left: 10px;
+}
+
+.mobile-dropdown-content.show {
+  display: block;
+}
+
+.mobile-dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* =========================================
+   6. HERO (ALL PAGES)
+========================================= */
+
+.hero {
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* BUTTON */
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #fff;
+  color: #ff0000;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   7. CARD (TOOLS UI)
+========================================= */
+
+.card {
+  width: 100%;
+  max-width: 800px;
+  margin: -80px auto 40px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f9fafc;
+}
+
+/* RESULT */
+.result {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* =========================================
+   8. GRID (HOMEPAGE)
+========================================= */
+
+.tool-grid,
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.tool-card,
+.feature {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.tool-card:hover,
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================================
+   9. CONTENT (SEO TEXT)
+========================================= */
+
+.content {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* =========================================
+   10. FOOTER
+========================================= */
+
+
+/* =========================================
+   FOOTER MAIN
+========================================= */
+
+.footer {
+  background: #111827;
+  color: #fff;
+  margin-top: 60px;
+  padding-top: 50px;
+}
+
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 30px;
+}
+
+/* COLUMN */
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+/* LINKS */
+.footer-col a {
+  display: block;
+  color: #ccc;
+  margin: 6px 0;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-col a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+/* BRAND SPECIAL */
+.footer-col.brand h3 {
+  font-size: 20px;
+}
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 30px;
+  padding: 15px 0;
+}
+
+.footer-bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .footer-grid {
+    gap: 20px;
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+}
+
+/* =========================================
+   11. RESPONSIVE (CRITICAL)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .card {
+    margin-top: -40px;
+    padding: 20px;
+  }
+
+}
