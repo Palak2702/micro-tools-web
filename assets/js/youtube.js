@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCPMPage();
   initShortsPage();
   initIncomePage();
+  updateViewsDisplay();
 });
 
 /* =========================================
@@ -56,26 +57,70 @@ function initCPMPage() {
 
 function initShortsPage() {
   const views = document.getElementById("views");
+  const category = document.getElementById("category");
   const minEl = document.getElementById("min");
   const avgEl = document.getElementById("avg");
   const maxEl = document.getElementById("max");
 
-  if (!views || !minEl || !avgEl || !maxEl) return;
+  if (!views || !category || !minEl || !avgEl || !maxEl) return;
 
-  views.addEventListener("input", calcShorts);
+  function getRPM(cat) {
+    const map = {
+      finance: { min: 6, max: 25 },
+      education: { min: 4, max: 18 },
+      tech: { min: 5, max: 20 },
+      cooking: { min: 4, max: 15 },
+      vlog: { min: 3, max: 12 },
+      entertainment: { min: 2, max: 10 },
+      funny: { min: 1.5, max: 8 },
+      gaming: { min: 1, max: 6 },
+      mix: { min: 2, max: 12 },
+    };
 
-  function calcShorts() {
-    let v = views.value;
-    if (!v) return;
+    return map[cat] || map.entertainment;
+  }
 
-    let min = (v / 1000) * 5;
-    let max = (v / 1000) * 20;
+  function calc() {
+    let v = Number(views.value || 0);
+    let cat = category.value;
+
+    let base = getRPM(cat);
+
+    let minRPM = base.min;
+    let maxRPM = base.max;
+
+    // 🔥 make category difference more visible
+    if (cat === "finance") {
+      minRPM *= 1.2;
+      maxRPM *= 1.4;
+    }
+
+    if (cat === "funny") {
+      minRPM *= 0.9;
+      maxRPM *= 1.0;
+    }
+
+    if (v > 1000000) {
+      minRPM *= 1.3;
+      maxRPM *= 1.5;
+    }
+
+    let min = (v / 1000) * minRPM;
+    let max = (v / 1000) * maxRPM;
     let avg = (min + max) / 2;
 
     minEl.innerText = "₹" + min.toFixed(0);
     avgEl.innerText = "₹" + avg.toFixed(0);
     maxEl.innerText = "₹" + max.toFixed(0);
   }
+
+  // 🔥 EVENTS (IMPORTANT FIX)
+  views.addEventListener("input", calc);
+  category.addEventListener("change", calc);
+
+  // initial run
+  views.value = views.value || 100000;
+  calc();
 }
 
 /* =========================================
@@ -95,37 +140,43 @@ function initIncomePage() {
   const monthly = document.getElementById("monthly");
   const yearly = document.getElementById("yearly");
   const insight = document.getElementById("insight");
-
+  const viewsValue = document.getElementById("viewsValue");
   const chartCanvas = document.getElementById("chart");
 
+  // ❌ FIRST CHECK EVERYTHING
   if (!views || !category || !type || !ads) return;
 
   let chart;
 
-  views.addEventListener("input", calculate);
-  category.addEventListener("change", calculate);
-  type.addEventListener("change", calculate);
-  ads.addEventListener("change", calculate);
+  const CPM_MAP_2026 = {
+    gaming: { min: 30, max: 90 },
+    entertainment: { min: 40, max: 120 },
+    funny: { min: 35, max: 110 },
+    vlog: { min: 45, max: 130 },
+    cooking: { min: 60, max: 180 },
+    mix: { min: 40, max: 120 },
+    education: { min: 120, max: 300 },
+    finance: { min: 250, max: 600 },
+  };
 
-  function calculate() {
-    let v = views.value;
+  function formatNumber(num) {
+    return Number(num).toLocaleString("en-IN");
+  }
 
-    let min = 40,
-      max = 80;
+  function updateViewsDisplay() {
+    if (!viewsValue) return;
+    viewsValue.innerText = formatNumber(views.value) + " views";
+  }
 
-    if (category.value === "education") {
-      min = 100;
-      max = 250;
-    }
+  function getCPM() {
+    let base = CPM_MAP_2026[category.value] || CPM_MAP_2026.entertainment;
 
-    if (category.value === "finance") {
-      min = 200;
-      max = 500;
-    }
+    let min = base.min;
+    let max = base.max;
 
     if (type.value === "shorts") {
-      min = 5;
-      max = 20;
+      min *= 0.15;
+      max *= 0.25;
     }
 
     if (ads.value === "low") {
@@ -134,9 +185,17 @@ function initIncomePage() {
     }
 
     if (ads.value === "high") {
-      min *= 1.5;
-      max *= 1.5;
+      min *= 1.4;
+      max *= 1.4;
     }
+
+    return { min, max };
+  }
+
+  function calculate() {
+    let v = Number(views.value);
+
+    let { min, max } = getCPM();
 
     let minIncome = (v / 1000) * min;
     let maxIncome = (v / 1000) * max;
@@ -149,11 +208,14 @@ function initIncomePage() {
     monthly.innerText = "₹" + avgIncome.toFixed(0);
     yearly.innerText = "₹" + (avgIncome * 12).toFixed(0);
 
-    if (avgIncome < 2000)
-      insight.innerText = "⚠️ Low earnings – Improve niche";
-    else if (avgIncome < 10000)
-      insight.innerText = "👍 Moderate income – Optimize content";
-    else insight.innerText = "🔥 High earning potential";
+    if (insight) {
+      insight.innerText =
+        avgIncome < 2000
+          ? "⚠️ Low earnings – Improve niche"
+          : avgIncome < 10000
+            ? "👍 Moderate income – Good growth"
+            : "🔥 High earning niche";
+    }
 
     updateChart(minIncome, avgIncome, maxIncome);
   }
@@ -180,5 +242,17 @@ function initIncomePage() {
     });
   }
 
+  // ✅ EVENTS (SAFE NOW)
+  views.addEventListener("input", () => {
+    updateViewsDisplay();
+    calculate();
+  });
+
+  category.addEventListener("change", calculate);
+  type.addEventListener("change", calculate);
+  ads.addEventListener("change", calculate);
+
+  // 🔥 IMPORTANT: INITIAL LOAD
+  updateViewsDisplay();
   calculate();
 }

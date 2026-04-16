@@ -7,12 +7,9 @@
 
 /* HERO OVERRIDE (YouTube Branding) */
 .hero {
-  width: 100%;
   background: linear-gradient(135deg, #ff0000, #ff4d4d);
-  color: white;
-  text-align: center;
-  padding: 80px 20px 120px;
 }
+
 
 /* TOOL TITLE */
 .card h2 {
@@ -44,19 +41,30 @@ select:focus {
 
 /* RESULT CARDS (for income/shorts pages) */
 .results {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
   margin-top: 20px;
 }
 
+/* RESULT CARD SAFE */
 .result-card {
-  flex: 1;
-  padding: 15px;
+  padding: 12px;
   border-radius: 10px;
   text-align: center;
   background: #eef2ff;
   transition: 0.3s;
+  min-width: 0; /* prevents overflow */
 }
+.result-card h3 {
+  font-size: 14px;
+}
+
+.result-card p {
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
 
 .result-card:hover {
   transform: translateY(-3px);
@@ -68,13 +76,12 @@ select:focus {
 }
 
 
-/* INSIGHT TEXT */
+/* INSIGHT */
 #insight {
   margin-top: 15px;
   text-align: center;
-  font-weight: 500;
+  font-size: 14px;
 }
-
 
 /* CHART CONTAINER */
 canvas {
@@ -94,6 +101,16 @@ canvas {
 .content p {
   color: #444;
 }
+/* CHART FIX */
+.chart-box {
+  width: 100%;
+  overflow-x: auto;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto !important;
+}
 
 
 /* =========================================
@@ -112,6 +129,12 @@ canvas {
 
   .card h2 {
     font-size: 18px;
+  }
+  .container {
+    padding: 0 16px; /* breathing space */
+  }
+   label {
+    font-size: 14px;
   }
 
 }

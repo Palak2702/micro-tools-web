@@ -25,83 +25,89 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <link rel="stylesheet" href="../../assets/css/global.css">
-<link rel="stylesheet" href="../../assets/css/youtube.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="../../assets/css/youtube.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
-   <div id="header"></div>
+    <div id="header"></div>
 
     <section class="hero">
       <h1>YouTube Income Calculator India 🇮🇳</h1>
       <p>Estimate your real YouTube earnings instantly</p>
     </section>
     <div class="container">
-    <div class="card">
-      <label>Monthly Views</label>
-      <input
-        type="range"
-        id="views"
-        min="1000"
-        max="1000000"
-        value="100000"
-        oninput="calculate()"
-      />
-      <div class="value" id="viewsValue"></div>
+      <div class="card">
+        <label>Monthly Views</label>
+        <input
+          type="range"
+          id="views"
+          min="1000"
+          max="1000000"
+          value="100000"
+        />
+        <div class="value" id="viewsValue"></div>
 
-      <label>Category</label>
-      <select id="category" onchange="calculate()">
-        <option value="gaming">Gaming</option>
-        <option value="education">Education</option>
-        <option value="finance">Finance</option>
-      </select>
+        <label>Category</label>
+        <select id="category">
+          <option value="gaming">Gaming</option>
+          <option value="entertainment">Entertainment</option>
 
-      <label>Video Type</label>
-      <select id="type" onchange="calculate()">
-        <option value="long">Long</option>
-        <option value="shorts">Shorts</option>
-      </select>
+          <option value="funny">Funny</option>
+          <option value="vlog">Vlogging</option>
+          <option value="cooking">Cooking</option>
+          <option value="mix">Mix Content</option>
 
-      <label>Ad Intensity</label>
-      <select id="ads" onchange="calculate()">
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-      </select>
+          <option value="education">Education</option>
+          <option value="finance">Finance</option>
+        </select>
 
-      <div class="results">
-        <div class="result-card">
-          <h3>Min</h3>
-          <p id="min"></p>
+        <label>Video Type</label>
+        <select id="type" onchange="calculate()">
+          <option value="long">Long</option>
+          <option value="shorts">Shorts</option>
+        </select>
+
+        <label>Ad Intensity</label>
+        <select id="ads" onchange="calculate()">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <div class="results">
+          <div class="result-card">
+            <h3>Min</h3>
+            <p id="min"></p>
+          </div>
+          <div class="result-card">
+            <h3>Avg</h3>
+            <p id="avg"></p>
+          </div>
+          <div class="result-card">
+            <h3>Max</h3>
+            <p id="max"></p>
+          </div>
         </div>
-        <div class="result-card">
-          <h3>Avg</h3>
-          <p id="avg"></p>
+
+        <div class="results">
+          <div class="result-card">
+            <h3>Monthly</h3>
+            <p id="monthly"></p>
+          </div>
+          <div class="result-card">
+            <h3>Yearly</h3>
+            <p id="yearly"></p>
+          </div>
         </div>
-        <div class="result-card">
-          <h3>Max</h3>
-          <p id="max"></p>
+
+        <div class="insight" id="insight"></div>
+
+        <div class="chart-box">
+          <canvas id="chart"></canvas>
         </div>
       </div>
-
-      <div class="results">
-        <div class="result-card">
-          <h3>Monthly</h3>
-          <p id="monthly"></p>
-        </div>
-        <div class="result-card">
-          <h3>Yearly</h3>
-          <p id="yearly"></p>
-        </div>
-      </div>
-
-      <div class="insight" id="insight"></div>
-
-      <div class="chart-box">
-        <canvas id="chart"></canvas>
-      </div>
-    </div>
     </div>
 
     <section class="seo">
@@ -155,11 +161,10 @@
       </div>
     </section>
 
-   <div id="footer"></div>
+    <div id="footer"></div>
 
-    
     <!-- JS -->
- <script src="../../assets/js/youtube.js"></script>
- <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/youtube.js"></script>
+    <script src="../../assets/js/main.js"></script>
   </body>
 </html>

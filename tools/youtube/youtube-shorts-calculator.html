@@ -34,33 +34,45 @@
 
     <section class="hero">
       <!-- <div class="container"> -->
-        <h1>YouTube Shorts Income Calculator India 🇮🇳</h1>
-        <p>Check Shorts earnings per views in rupees</p>
+      <h1>YouTube Shorts Income Calculator India 🇮🇳</h1>
+      <p>Check Shorts earnings per views in rupees</p>
       <!-- </div> -->
     </section>
 
+    <!-- TOOL -->
     <!-- TOOL -->
     <div class="container">
       <div class="card">
         <h2>Shorts Earnings Calculator</h2>
 
         <label>Enter Views</label>
-        <input
-          type="number"
-          id="views"
-          placeholder="100000"
-          oninput="calcShorts()"
-        />
+        <input type="number" id="views" placeholder="100000" />
+
+        <!-- 🔥 NEW: CATEGORY (IMPORTANT FOR REALISM) -->
+        <label>Category</label>
+        <select id="category">
+          <option value="entertainment">Entertainment</option>
+          <option value="funny">Funny</option>
+          <option value="vlog">Vlog</option>
+          <option value="cooking">Cooking</option>
+          <option value="gaming">Gaming</option>
+          <option value="education">Education</option>
+          <option value="finance">Finance</option>
+          <option value="tech">Tech</option>
+          <option value="mix">Mix Content</option>
+        </select>
 
         <div class="results">
           <div class="result-card">
             <h3>Min</h3>
             <p id="min"></p>
           </div>
+
           <div class="result-card">
             <h3>Avg</h3>
             <p id="avg"></p>
           </div>
+
           <div class="result-card">
             <h3>Max</h3>
             <p id="max"></p>
@@ -70,8 +82,8 @@
     </div>
 
     <!-- SEO CONTENT -->
-    <section class="section">
-      <div class="content">
+    <section class="seo">
+      <div class="container">
         <h2>YouTube Shorts Income in India (₹)</h2>
 
         <p>
@@ -119,8 +131,8 @@
       </div>
     </section>
 
-   <div id="footer"></div>
-<script src="../../assets/js/main.js"></script>
+    <div id="footer"></div>
+    <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/youtube.js"></script>
   </body>
 </html>
