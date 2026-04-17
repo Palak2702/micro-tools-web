@@ -1,133 +1,241 @@
-/* BLOG PAGE WRAPPER */
+/* ===============================
+   BLOG PAGE – PRO UI (YOUTUBE STYLE)
+================================ */
+
+/* CONTAINER */
 .blog-container {
-  max-width: 850px;
+  max-width: 950px;
   margin: 40px auto;
   padding: 20px;
 }
 
-/* BLOG TITLE */
+/* HERO TITLE */
 .blog-container h1 {
-  font-size: clamp(26px, 4vw, 34px);
+  font-size: clamp(28px, 4vw, 36px);
   line-height: 1.3;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
-/* INTRO */
 .blog-container > p {
-  /* font-size: 16px; */
-  color: var(--text-secondary);
+  color: #6b7280;
   margin-bottom: 25px;
+  font-size: 16px;
 }
 
-/* SECTION CARD */
+/* ===============================
+   TOOL CTA SECTION (TOP)
+================================ */
+.blog-tools {
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+.blog-tools h2 {
+  margin-bottom: 15px;
+}
+
+.blog-tools a {
+  display: block;
+  background: white;
+  color: #ff0000;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 320px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.blog-tools a:hover {
+  transform: scale(1.05);
+  background: #fff5f5;
+}
+
+/* ===============================
+   BLOG SECTION (CARD STYLE)
+================================ */
 .blog-section {
-  background: #ffffff;
+  margin: 30px 0;
+}
+
+/* GRID FOR CARDS */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* BLOG CARD */
+.blog-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
+  transition: 0.3s;
+  text-decoration: none;
+  color: #111827;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* TOP BORDER ANIMATION */
+.blog-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff0000, #ff4d4d);
+}
+
+/* CARD TITLE */
+.blog-card h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+/* CARD TEXT */
+.blog-card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ===============================
+   INFO BLOCK (CONTENT SECTIONS)
+================================ */
+.blog-content-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
   margin-top: 20px;
   transition: 0.3s;
 }
 
-.blog-section:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transform: translateY(-2px);
+.blog-content-box:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 /* HEADINGS */
-.blog-section h2 {
-  /* font-size: 22px; */
-  margin-bottom: 10px;
-  color: #0f172a;
+.blog-content-box h2 {
+  margin-bottom: 12px;
+  font-size: 22px;
 }
 
-.blog-section h3 {
-  /* font-size: 18px; */
-  margin-bottom: 8px;
+.blog-content-box h3 {
+  margin-top: 15px;
+  font-size: 17px;
 }
 
 /* TEXT */
-.blog-section p {
-  /* font-size: 15px; */
+.blog-content-box p {
   line-height: 1.7;
   color: #475569;
 }
 
-/* LISTS */
-.blog-section ul {
-  padding-left: 20px;
+/* LIST */
+.blog-content-box ul {
   margin-top: 10px;
+  padding-left: 20px;
 }
 
-.blog-section li {
+.blog-content-box li {
   margin-bottom: 8px;
 }
 
-/* HIGHLIGHT BOX */
+/* ===============================
+   HIGHLIGHT BOX
+================================ */
 .highlight-box {
-  background: #eef2ff;
-  border-left: 4px solid #2563eb;
+  background: #fff5f5;
+  border-left: 4px solid #ff0000;
   padding: 12px;
   border-radius: 6px;
   margin-top: 12px;
 }
 
-/* CTA LINKS */
+/* ===============================
+   LINK STYLING
+================================ */
+.blog-content-box a {
+  color: #ff0000;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.blog-content-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   CTA BUTTONS
+================================ */
 .blog-links {
   margin-top: 30px;
-  padding: 20px;
-  background: #f8fafc;
-  border-radius: 10px;
+  padding: 25px;
+  background: #111827;
+  border-radius: 14px;
   text-align: center;
 }
 
 .blog-links a {
   display: inline-block;
-  margin: 8px;
-  padding: 10px 16px;
-  background: #2563eb;
+  margin: 10px;
+  padding: 12px 18px;
+  background: #ff0000;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  font-size: 14px;
+  transition: 0.3s;
 }
 
 .blog-links a:hover {
-  background: #1e40af;
+  background: #e60000;
+  transform: scale(1.05);
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+@media (max-width: 768px) {
+
   .blog-container {
     padding: 15px;
   }
 
-  .blog-section {
+  .blog-tools {
+    padding: 18px;
+  }
+
+  .blog-tools a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .blog-card {
+    padding: 15px;
+  }
+
+  .blog-content-box {
     padding: 16px;
   }
-}
 
-/* BLOG LIST LINKS */
-.blog-section ul li a {
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 500;
-}
-
-.blog-section ul li a:hover {
-  text-decoration: underline;
-}
-
-/* FEATURED CARDS (OPTIONAL) */
-.blog-card {
-  border: 1px solid #e5e7eb;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-
-.blog-card:hover {
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  .blog-links a {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+  }
 }
