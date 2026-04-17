@@ -597,3 +597,417 @@ select {
   }
 
 }
+
+/* =========================
+   CONTACT PAGE – PRO UI
+========================= */
+
+.contact-container {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* HERO */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-hero h1 {
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  color: #6b7280;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* CARD */
+.contact-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transform: translateY(-3px);
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.contact-box {
+  background: #f9fafc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* FORM */
+.contact-form {
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f9fafc;
+}
+
+/* BUTTON */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e60000;
+}
+
+/* NOTE */
+.contact-note {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* CTA */
+.contact-cta {
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  color: white;
+}
+
+.contact-cta a {
+  display: block;
+  margin: 10px auto;
+  max-width: 320px;
+  background: white;
+  color: #ff0000;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-cta a:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-card {
+    padding: 16px;
+  }
+}
+
+/* =========================
+   PRIVACY PAGE UI
+========================= */
+
+.privacy-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* HERO */
+.privacy-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.privacy-hero h1 {
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: 10px;
+}
+
+.privacy-hero p {
+  color: #6b7280;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* CARD */
+.privacy-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.privacy-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+}
+
+.privacy-card h2 {
+  margin-bottom: 8px;
+}
+
+.privacy-card p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.privacy-card ul {
+  padding-left: 20px;
+}
+
+.privacy-card li {
+  margin-bottom: 6px;
+}
+
+/* CTA */
+.privacy-cta {
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  color: white;
+}
+
+.privacy-cta a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: white;
+  color: #ff0000;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.privacy-cta a:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+.privacy-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 15px;
+  }
+
+  .privacy-card {
+    padding: 15px;
+  }
+}
+
+/* ======================================
+   TERMS PAGE – PRO UI (CONSISTENT SYSTEM)
+====================================== */
+
+/* CONTAINER */
+.terms-container {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.terms-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.terms-hero h1 {
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.terms-hero p {
+  color: #6b7280;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* =========================
+   CARD SECTION
+========================= */
+.terms-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 22px;
+  transition: all 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.terms-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADINGS */
+.terms-card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #111827;
+}
+
+/* TEXT */
+.terms-card p {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* LIST */
+.terms-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.terms-card li {
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+/* =========================
+   IMPORTANT BOX (OPTIONAL)
+========================= */
+.terms-card:nth-child(3) {
+  border-left: 4px solid #ff0000;
+  background: #fff5f5;
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+.terms-cta {
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+.terms-cta h2 {
+  margin-bottom: 8px;
+}
+
+.terms-cta p {
+  margin-bottom: 15px;
+  color: #ffe5e5;
+}
+
+/* CTA BUTTON */
+.terms-cta a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #ff0000;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.terms-cta a:hover {
+  transform: scale(1.05);
+  background: #fff0f0;
+}
+
+/* =========================
+   FOOTER TEXT
+========================= */
+.terms-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================
+   LINK STYLE
+========================= */
+.terms-card a {
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.terms-card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+
+  .terms-container {
+    padding: 15px;
+  }
+
+  .terms-card {
+    padding: 16px;
+  }
+
+  .terms-hero h1 {
+    font-size: 24px;
+  }
+
+  .terms-cta {
+    padding: 20px;
+  }
+
+  .terms-cta a {
+    width: 90%;
+    display: block;
+    margin: 10px auto 0;
+  }
+
+}
