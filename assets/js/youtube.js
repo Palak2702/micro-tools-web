@@ -137,48 +137,63 @@ function initIncomePage() {
   const avgEl = document.getElementById("avg");
   const maxEl = document.getElementById("max");
 
-  const monthly = document.getElementById("monthly");
-  const yearly = document.getElementById("yearly");
+  const dailyEl = document.getElementById("daily");
+  const monthlyEl = document.getElementById("monthly");
+  const yearlyEl = document.getElementById("yearly");
+
+  const per1000El = document.getElementById("per1000");
+  const sixMonthEl = document.getElementById("sixMonth");
+  const perVideoEl = document.getElementById("perVideo");
+
   const insight = document.getElementById("insight");
+  const explain = document.getElementById("explain");
   const viewsValue = document.getElementById("viewsValue");
+
   const chartCanvas = document.getElementById("chart");
 
-  // ❌ FIRST CHECK EVERYTHING
-  if (!views || !category || !type || !ads) return;
+  if (!views) return;
 
   let chart;
 
-  const CPM_MAP_2026 = {
-    gaming: { min: 30, max: 90 },
+  // ================================
+  // 2026 INDIA REALISTIC CPM MAP
+  // ================================
+  const CPM_MAP = {
     entertainment: { min: 40, max: 120 },
-    funny: { min: 35, max: 110 },
-    vlog: { min: 45, max: 130 },
+    funny: { min: 30, max: 90 },
+    vlog: { min: 45, max: 140 },
     cooking: { min: 60, max: 180 },
+
+    gaming: { min: 35, max: 110 },
+    tech: { min: 80, max: 250 },
+
+    education: { min: 120, max: 320 },
+    finance: { min: 250, max: 650 },
+
+    travel: { min: 70, max: 200 },
+    motivation: { min: 60, max: 160 },
+
     mix: { min: 40, max: 120 },
-    education: { min: 120, max: 300 },
-    finance: { min: 250, max: 600 },
+    all: { min: 50, max: 150 },
   };
 
-  function formatNumber(num) {
-    return Number(num).toLocaleString("en-IN");
-  }
-
-  function updateViewsDisplay() {
-    if (!viewsValue) return;
-    viewsValue.innerText = formatNumber(views.value) + " views";
+  function format(num) {
+    return "₹" + Number(num).toLocaleString("en-IN");
   }
 
   function getCPM() {
-    let base = CPM_MAP_2026[category.value] || CPM_MAP_2026.entertainment;
+    let base = CPM_MAP[category.value] || CPM_MAP.entertainment;
 
     let min = base.min;
     let max = base.max;
 
+    // Shorts adjustment
     if (type.value === "shorts") {
-      min *= 0.15;
-      max *= 0.25;
+      min *= 0.2;
+      max *= 0.3;
     }
 
+    // Ad intensity adjustment
     if (ads.value === "low") {
       min *= 0.7;
       max *= 0.7;
@@ -194,35 +209,86 @@ function initIncomePage() {
 
   function calculate() {
     let v = Number(views.value);
-
     let { min, max } = getCPM();
 
     let minIncome = (v / 1000) * min;
     let maxIncome = (v / 1000) * max;
     let avgIncome = (minIncome + maxIncome) / 2;
 
-    minEl.innerText = "₹" + minIncome.toFixed(0);
-    avgEl.innerText = "₹" + avgIncome.toFixed(0);
-    maxEl.innerText = "₹" + maxIncome.toFixed(0);
+    // ================================
+    // MAIN OUTPUTS
+    // ================================
+    minEl.innerText = format(minIncome);
+    avgEl.innerText = format(avgIncome);
+    maxEl.innerText = format(maxIncome);
 
-    monthly.innerText = "₹" + avgIncome.toFixed(0);
-    yearly.innerText = "₹" + (avgIncome * 12).toFixed(0);
+    // ================================
+    // TIME BREAKDOWN
+    // ================================
+    let daily = avgIncome / 30;
+    let monthly = avgIncome;
+    let yearly = avgIncome * 12;
 
-    if (insight) {
-      insight.innerText =
-        avgIncome < 2000
-          ? "⚠️ Low earnings – Improve niche"
-          : avgIncome < 10000
-            ? "👍 Moderate income – Good growth"
-            : "🔥 High earning niche";
+    dailyEl.innerText = format(daily);
+    monthlyEl.innerText = format(monthly);
+    yearlyEl.innerText = format(yearly);
+
+    // ================================
+    // PER VIDEO (FIXED)
+    // ================================
+    let videosPerMonth = 30;
+    let perVideoIncome = avgIncome / videosPerMonth;
+    perVideoEl.innerText = format(perVideoIncome);
+
+    // ================================
+    // PER 1000 VIEWS
+    // ================================
+    let per1000 = avgIncome / (v / 1000);
+    per1000El.innerText = format(per1000);
+
+    // ================================
+    // 6 MONTH PROJECTION
+    // ================================
+    let projected = avgIncome;
+    for (let i = 0; i < 6; i++) {
+      projected += projected * 0.1;
+    }
+    sixMonthEl.innerText = format(projected);
+
+    // ================================
+    // INSIGHT
+    // ================================
+    if (avgIncome < 3000) {
+      insight.innerText = "⚠️ Low earning potential niche";
+    } else if (avgIncome < 15000) {
+      insight.innerText = "📈 Medium earning potential";
+    } else {
+      insight.innerText = "🔥 High earning niche in India 2026";
     }
 
+    // ================================
+    // EXPLANATION
+    // ================================
+    if (category.value === "finance") {
+      explain.innerText = "Finance niche has highest CPM in India.";
+    } else if (type.value === "shorts") {
+      explain.innerText = "Shorts earn less due to limited ad revenue.";
+    } else {
+      explain.innerText = "Earnings depend on CPM, niche and audience.";
+    }
+
+    // ================================
+    // CHART
+    // ================================
     updateChart(minIncome, avgIncome, maxIncome);
+
+    // ================================
+    // VIEW DISPLAY
+    // ================================
+    viewsValue.innerText = v.toLocaleString("en-IN") + " views";
   }
 
   function updateChart(min, avg, max) {
-    if (!chartCanvas) return;
-
     if (chart) chart.destroy();
 
     chart = new Chart(chartCanvas, {
@@ -242,17 +308,17 @@ function initIncomePage() {
     });
   }
 
-  // ✅ EVENTS (SAFE NOW)
-  views.addEventListener("input", () => {
-    updateViewsDisplay();
-    calculate();
+  // ================================
+  // EVENTS
+  // ================================
+  ["input", "change"].forEach((event) => {
+    views.addEventListener(event, calculate);
+    category.addEventListener(event, calculate);
+    type.addEventListener(event, calculate);
+    ads.addEventListener(event, calculate);
   });
 
-  category.addEventListener("change", calculate);
-  type.addEventListener("change", calculate);
-  ads.addEventListener("change", calculate);
-
-  // 🔥 IMPORTANT: INITIAL LOAD
-  updateViewsDisplay();
   calculate();
 }
+
+document.addEventListener("DOMContentLoaded", initIncomePage);  
