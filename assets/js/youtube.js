@@ -3,10 +3,15 @@
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-  initCPMPage();
-  initShortsPage();
-  initIncomePage();
-  updateViewsDisplay();
+  if (document.getElementById("niche")) initCPMPage();
+  if (document.getElementById("category") && document.getElementById("type"))
+    initIncomePage();
+  if (
+    document.getElementById("category") &&
+    document.getElementById("min") &&
+    !document.getElementById("type")
+  )
+    initShortsPage();
 });
 
 /* =========================================
@@ -14,41 +19,149 @@ document.addEventListener("DOMContentLoaded", () => {
 ========================================= */
 
 function initCPMPage() {
-  const views = document.getElementById("views");
-  const cpm = document.getElementById("cpm");
+  const views = document.getElementById("cpmViews");
+  const cpm = document.getElementById("cpmValue");
+  const niche = document.getElementById("niche");
+
   const result = document.getElementById("result");
+  const rpmResult = document.getElementById("rpmResult");
+  const rangeResult = document.getElementById("rangeResult");
+  const cpmRange = document.getElementById("cpmRange");
+
   const chartCanvas = document.getElementById("chart");
+  const toggle = document.getElementById("manualCpmToggle");
+  const cpmHint = document.getElementById("cpmHint");
 
-  if (!views || !cpm || !result) return; // only run on CPM page
+  if (!views || !cpm || !niche || !chartCanvas) return;
 
-  views.addEventListener("input", calcCPM);
-  cpm.addEventListener("input", calcCPM);
+  // ✅ Niche CPM Data (REQUIRED FIX)
+  const nicheData = {
+    gaming: { min: 50, max: 150 },
+    entertainment: { min: 60, max: 180 },
+    education: { min: 150, max: 350 },
+    finance: { min: 250, max: 600 },
+    tech: { min: 120, max: 300 },
+    vlog: { min: 40, max: 120 },
+    fitness: { min: 80, max: 200 },
+    food: { min: 70, max: 180 },
+    business: { min: 200, max: 500 },
+  };
 
+  let chart;
+
+  // =========================
+  // TOGGLE (Beginner / Advanced)
+  // =========================
+  if (toggle) {
+    toggle.addEventListener("change", () => {
+      if (toggle.checked) {
+        // Advanced mode
+        cpm.disabled = false;
+        if (cpmHint) cpmHint.innerText = "You can now enter CPM manually";
+      } else {
+        // Beginner mode
+        cpm.disabled = true;
+
+        let selected = niche.value;
+        if (selected && nicheData[selected]) {
+          let data = nicheData[selected];
+          let avg = (data.min + data.max) / 2;
+          cpm.value = avg.toFixed(0);
+        }
+
+        if (cpmHint)
+          cpmHint.innerText = "CPM is auto-filled based on selected niche";
+
+        calcCPM();
+      }
+    });
+  }
+
+  // =========================
+  // NICHE CHANGE
+  // =========================
+  niche.addEventListener("change", () => {
+    let selected = niche.value;
+    if (!selected || !nicheData[selected]) return;
+
+    let data = nicheData[selected];
+    let avg = (data.min + data.max) / 2;
+
+    // Only auto-fill if NOT in manual mode
+    if (!toggle || !toggle.checked) {
+      cpm.value = avg.toFixed(0);
+    }
+
+    cpmRange.innerText = `Typical CPM Range: ₹${data.min} – ₹${data.max}`;
+
+    calcCPM();
+  });
+
+  // =========================
+  // CALCULATION
+  // =========================
   function calcCPM() {
-    let v = views.value;
-    let c = cpm.value;
+    let v = parseFloat(views.value);
+    let c = parseFloat(cpm.value);
 
     if (!v || !c) return;
 
-    let earnings = (v / 1000) * c;
-    result.innerText = "Estimated Earnings: ₹" + earnings.toFixed(0);
-  }
+    let cpmEarnings = (v / 1000) * c;
+    let rpm = c * 0.6 * 0.55;
+    let rpmEarnings = (v / 1000) * rpm;
 
-  // Chart
-  if (chartCanvas) {
-    new Chart(chartCanvas, {
+    let low = rpmEarnings * 0.7;
+    let high = rpmEarnings * 1.3;
+
+    result.innerText = `₹${cpmEarnings.toLocaleString("en-IN")}`;
+    rpmResult.innerText = `₹${rpmEarnings.toLocaleString("en-IN")}`;
+    rangeResult.innerText = `₹${low.toLocaleString("en-IN")} – ₹${high.toLocaleString("en-IN")}`;
+
+    if (chart) chart.destroy();
+
+    chart = new Chart(chartCanvas, {
       type: "bar",
       data: {
-        labels: ["Gaming", "Entertainment", "Education", "Finance"],
+        labels: ["CPM", "RPM"],
         datasets: [
           {
-            label: "CPM ₹",
-            data: [80, 120, 250, 500],
+            label: "Earnings ₹",
+            data: [cpmEarnings, rpmEarnings],
+            backgroundColor: ["#3b82f6", "#ef4444"],
           },
         ],
       },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
     });
   }
+
+  // =========================
+  // EVENTS
+  // =========================
+  views.addEventListener("input", calcCPM);
+  cpm.addEventListener("input", calcCPM);
+
+  // =========================
+  // DEFAULT STATE
+  // =========================
+  views.value = 100000;
+
+  // Beginner mode default
+  cpm.disabled = true;
+  if (toggle) toggle.checked = false;
+
+  // Auto-fill initial CPM (optional: set default niche)
+  let defaultNiche = "entertainment";
+  niche.value = defaultNiche;
+
+  let data = nicheData[defaultNiche];
+  cpm.value = ((data.min + data.max) / 2).toFixed(0);
+  cpmRange.innerText = `Typical CPM Range: ₹${data.min} – ₹${data.max}`;
+
+  calcCPM();
 }
 
 /* =========================================
@@ -151,7 +264,7 @@ function initIncomePage() {
 
   const chartCanvas = document.getElementById("chart");
 
-  if (!views) return;
+  if (!views || !category || !type || !ads) return;
 
   let chart;
 
@@ -312,13 +425,13 @@ function initIncomePage() {
   // EVENTS
   // ================================
   ["input", "change"].forEach((event) => {
-    views.addEventListener(event, calculate);
-    category.addEventListener(event, calculate);
-    type.addEventListener(event, calculate);
-    ads.addEventListener(event, calculate);
+    if (views) views.addEventListener(event, calculate);
+    if (category) category.addEventListener(event, calculate);
+    if (type) type.addEventListener(event, calculate);
+    if (ads) ads.addEventListener(event, calculate);
   });
 
   calculate();
 }
 
-document.addEventListener("DOMContentLoaded", initIncomePage);  
+document.addEventListener("DOMContentLoaded", initIncomePage);

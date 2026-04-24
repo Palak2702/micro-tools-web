@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>YouTube CPM India (₹) – Calculator, Rates & Meaning 2026</title>
+    <title>YouTube CPM In India (₹) – Calculator, Rates & Meaning 2026</title>
 
     <meta
       name="description"
@@ -75,14 +75,15 @@
     <section class="hero">
       <!-- <div class="container"> -->
       <h1>YouTube CPM India (2026 Updated)</h1>
-      <p>Understand CPM, calculate earnings & compare niches</p>
+      <p>Understand CPM, calculate earnings</p>
       <!-- </div> -->
     </section>
 
     <!-- GRAPH -->
     <div class="container">
       <div class="card">
-        <canvas id="chart"></canvas>
+        <canvas id="chart" height="250"></canvas>
+        <!-- <canvas id="growthChart" height="250"></canvas> -->
       </div>
     </div>
 
@@ -91,18 +92,52 @@
       <div class="card">
         <h2>YouTube CPM Calculator India</h2>
 
+        <label>Select Niche</label>
+        <select id="niche">
+          <option value="">-- Select Niche --</option>
+          <option value="gaming">Gaming</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="education">Education</option>
+          <option value="finance">Finance</option>
+          <option value="tech">Technology</option>
+          <option value="vlog">Vlogging</option>
+          <option value="fitness">Fitness</option>
+          <option value="food">Food</option>
+          <option value="business">Business</option>
+        </select>
+
+        <p id="cpmRange"></p>
+
         <label>Enter Views</label>
-        <input
-          type="number"
-          id="views"
-          placeholder="100000"
-          oninput="calcCPM()"
-        />
+        <input type="number" id="cpmViews" placeholder="100000" />
+
+        <div class="switch">
+          <input type="checkbox" id="manualCpmToggle" />
+          <label for="manualCpmToggle"></label>
+          <span>Enter CPM manually</span>
+        </div>
+        <small id="cpmHint">CPM is auto-filled based on selected niche</small>
 
         <label>Enter CPM (₹)</label>
-        <input type="number" id="cpm" placeholder="100" oninput="calcCPM()" />
+        <!-- <input type="number" id="cpmValue" placeholder="100" /> -->
+        <input type="number" id="cpmValue" placeholder="100" disabled />
 
-        <p class="result" id="result"></p>
+        <div class="results-box">
+          <div class="result-item">
+            <span>💰 Actual Earnings (RPM)</span>
+            <h3 id="rpmResult"></h3>
+          </div>
+
+          <div class="result-item">
+            <span>📊 CPM Earnings (Before YouTube Cut)</span>
+            <p id="result"></p>
+          </div>
+
+          <div class="result-item">
+            <span>📉 Estimated Range</span>
+            <p id="rangeResult"></p>
+          </div>
+        </div>
       </div>
       <div class="tool-links">
         <h3>Calculate Your Earnings</h3>
@@ -118,56 +153,160 @@
     </div>
 
     <!-- SEO CONTENT -->
+
     <section class="seo">
       <div class="container">
-        <h2>What is YouTube CPM? (Meaning)</h2>
         <p>
-          CPM (Cost Per Mille) means how much advertisers pay per 1000 views.
-          Simply:
-          <strong
-            >CPM = money earned per 1000 views (before YouTube cut)</strong
+          If you are searching for <strong>YouTube CPM in India</strong> or
+          trying to use a YouTube CPM calculator, you need to understand how CPM
+          actually works and why your real earnings are always different from
+          what you expect.
+        </p>
+
+        <p>
+          This page helps you calculate CPM, estimate RPM earnings, and
+          understand how YouTube income changes based on niche, views, and
+          audience.
+        </p>
+
+        <h2>YouTube CPM Meaning (Full Explanation)</h2>
+        <p>
+          YouTube CPM (Cost Per Mille) means the amount advertisers pay for
+          1,000 ad impressions on your videos.
+        </p>
+
+        <p>
+          In simple terms, CPM shows how much money your content generates
+          before YouTube takes its share.
+        </p>
+
+        <p>
+          Many creators search for <strong>“YouTube CPM meaning”</strong> or
+          <strong>“YouTube CPM full form”</strong>, but the real understanding
+          comes from how it affects your actual earnings.
+        </p>
+
+        <h3>Real Example</h3>
+        <p>If your CPM is ₹120 and your video gets 10,000 views:</p>
+
+        <p>
+          10,000 ÷ 1000 = 10<br />
+          10 × ₹120 = ₹1200 (before YouTube cut)
+        </p>
+
+        <p>
+          But this is not your real income. Not all views show ads and YouTube
+          takes around 45%.
+        </p>
+
+        <h2>YouTube RPM vs CPM (Important Difference)</h2>
+        <p>
+          RPM (Revenue Per Mille) is your actual earning after YouTube’s cut and
+          monetized views.
+        </p>
+
+        <p>This is why your real income is always lower than CPM.</p>
+
+        <p>
+          If you want deeper breakdown, read:
+          <br />
+          👉
+          <a href="/blogs/youtube-rpm-in-india.html"
+            >YouTube RPM in India Explained</a
           >
         </p>
 
-        <h3>CPM to Earnings Example</h3>
+        <h2>YouTube CPM in India (2026 Updated)</h2>
         <p>
-          If CPM = ₹100<br />
-          1000 views = ₹100<br />
-          100,000 views = ₹10,000
+          YouTube CPM in India is lower than countries like the US or UK because
+          advertisers spend less per user.
+        </p>
+
+        <ul>
+          <li>India: ₹40 – ₹300</li>
+          <li>USA: ₹500 – ₹2000</li>
+          <li>UK: ₹400 – ₹1500</li>
+        </ul>
+
+        <p>However, CPM depends heavily on niche:</p>
+
+        <ul>
+          <li>Finance / Business: ₹250 – ₹600+</li>
+          <li>Tech / Education: ₹120 – ₹300</li>
+          <li>Entertainment / Gaming: ₹40 – ₹150</li>
+        </ul>
+
+        <p>
+          👉 See detailed breakdown:
+          <br />
+          <a href="/blogs/youtube-cpm-by-category-india.html"
+            >YouTube CPM by Category in India</a
+          >
         </p>
 
         <h2>YouTube CPM by Country</h2>
-        <ul>
-          <li>India: ₹40–₹300</li>
-          <li>USA: ₹500–₹2000</li>
-          <li>UK: ₹400–₹1500</li>
-        </ul>
-
-        <h2>How to Increase YouTube CPM</h2>
-        <ul>
-          <li>Choose finance/business niche</li>
-          <li>Target US audience</li>
-          <li>Improve watch time</li>
-          <li>Create longer videos</li>
-        </ul>
-
-        <h2>CPM ka matlab kya hota hai? (Hindi)</h2>
         <p>
-          CPM ka matlab hota hai advertiser 1000 views ke liye kitna paisa deta
-          hai. Agar CPM ₹100 hai, toh 1000 views par ₹100 milenge (YouTube cut
-          se pehle).
+          CPM varies significantly depending on audience location. Countries
+          like the USA, UK, and Canada have higher advertiser budgets.
+        </p>
+
+        <p>
+          👉 Full list here:
+          <br />
+          <a href="/blogs/youtube-cpm-by-country.html"
+            >YouTube CPM by Country (Complete List)</a
+          >
+        </p>
+
+        <h2>How This YouTube CPM Calculator Helps</h2>
+        <p>
+          This tool is designed to give you a realistic estimate of your YouTube
+          earnings instead of showing misleading fixed numbers.
+        </p>
+
+        <p>
+          Simply select your niche and enter your total views (minimum 1,000).
+          The calculator will automatically suggest a CPM based on updated 2026
+          data. If you already know your CPM, you can also enter it manually for
+          more accurate results.
+        </p>
+
+        <p>Based on your input, the tool calculates:</p>
+
+        <ul>
+          <li>Estimated RPM (your actual earnings after YouTube cut)</li>
+          <li>CPM earnings (before YouTube cut)</li>
+          <li>A realistic earning range based on different factors</li>
+        </ul>
+        <p class="note">
+          *Actual earnings may vary depending on audience location, watch time,
+          and ad availability.
         </p>
 
         <h2>Frequently Asked Questions</h2>
 
-        <h3>Is CPM per video or per month?</h3>
-        <p>CPM per 1000 views hota hai, not per video or per month.</p>
+        <h3>What is YouTube CPM calculator?</h3>
+        <p>It is a tool that helps estimate earnings based on CPM and views.</p>
 
-        <h3>Why is CPM low in India?</h3>
-        <p>India me advertiser budget kam hota hai compared to US.</p>
+        <h3>Why is YouTube CPM low in India?</h3>
+        <p>
+          Because advertiser budgets are lower compared to countries like the
+          USA.
+        </p>
+
+        <h3>How to increase CPM?</h3>
+        <p>
+          Focus on high-paying niches, target global audience, and improve
+          content quality.
+        </p>
+        <h2>CPM ka matlab kya hota hai? (Hindi)</h2>
+        <p>
+          CPM ka matlab hota hai advertiser 1000 views ke liye kitna paisa deta
+          hai. Lekin creator ko poora paisa nahi milta kyunki YouTube apna hissa
+          kaat leta hai.
+        </p>
       </div>
     </section>
-
     <!-- FOOTER -->
     <div id="footer"></div>
 
